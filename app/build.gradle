@@ -14,7 +14,11 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
-
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        disable 'RestrictedApi'
+    }
     buildTypes {
         debug{
 
@@ -25,6 +29,10 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
