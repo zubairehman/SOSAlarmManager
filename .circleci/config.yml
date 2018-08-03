@@ -10,13 +10,13 @@ references:
         _JAVA_OPTIONS: "-Xmx2048m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
         GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m"'
 jobs:
-    # Build debug APK for unit tests and an instrumented test APK
-    build_debug:
-      <<: *android_config
-      steps:
+  # Build debug APK for unit tests and an instrumented test APK
+  build_debug:
+    <<: *android_config
+    steps:
       - checkout
-       - restore_cache:
-                key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+      - restore_cache:
+              key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Download dependencies
           command: ./gradlew androidDependencies
@@ -66,21 +66,21 @@ jobs:
       #- store_test_results:
        #   path: app/build/test-results
 
-      # Build release APK
-      build_release:
-        # ...
-      # Run unit tests
-      test_unit:
-        # ...
-      # Run instrumented tests
-      test_instrumented:
-        # ...
-      # Submit JaCoCo coverage report
-      report_coverage:
-        # ...
-      # Deploy release APK
-      deploy:
-        # ...
+  # Build release APK
+  build_release:
+    # ...
+  # Run unit tests
+  test_unit:
+    # ...
+  # Run instrumented tests
+  test_instrumented:
+    # ...
+  # Submit JaCoCo coverage report
+  report_coverage:
+    # ...
+  # Deploy release APK
+  deploy:
+    # ...
 workflows:
   version: 2
   workflow:
