@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 // Load dependencies
-apply from: '../CubiVue Base/base/dependencies.gradle'
+apply from: '../CubiVue App/dependencies.gradle'
 
 buildscript {
     ext.kotlin_version = '1.2.50'
