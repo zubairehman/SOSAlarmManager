@@ -2,9 +2,9 @@ version: 2
 references:
     # We will define reusable references here
     android_config: &android_config
-      working_directory: ~/repo/android/
+      working_directory: ~/repo
       docker:
-        - image: circleci/android:api-28-alpha
+        - image: circleci/android:api-25
       environment:
         ANDROID_HOME: /usr/local/android-sdk-linux
         TERM: dumb
@@ -24,13 +24,12 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
 
       - attach_workspace:
-          at: ~/repo/android/
+          at: ~/repo
 
       - run:
           name: Download Dependencies
           command: |
-            cd android/; ./gradlew androidDependencies
-            sudo chmod +x ./gradlew
+            ./gradlew androidDependencies
 
       - save_cache:
           paths:
