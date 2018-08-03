@@ -41,5 +41,5 @@ dependencies {
     androidTestImplementation testDependencies.espressoCore
 
     //Base Module
-    implementation project(":base")
+    //implementation project(":base")
 }
