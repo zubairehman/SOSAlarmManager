@@ -31,8 +31,8 @@ jobs:
       - run:
           name: Download Dependencies
           command: |
-                   sudo chmod +x gradlew
-                   gradlew androidDependencies
+                   sudo chmod +x ./gradlew
+                   ./gradlew androidDependencies
 
       - save_cache:
           paths:
@@ -41,7 +41,7 @@ jobs:
 
       - run:
           name: Gradle build (debug)
-          command: gradlew -PciBuild=true :app:assembleDebug :app:assembleAndroidTest
+          command: ./gradlew -PciBuild=true :app:assembleDebug :app:assembleAndroidTest
 
       - store_artifacts:
           path: app/build/outputs/apk/
