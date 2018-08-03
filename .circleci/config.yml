@@ -49,11 +49,9 @@ jobs:
   test_unit:
     <<: *android_config
     steps:
-      - run:
-          name: Run Tests
-          command: |
-                   sudo chmod +x ./gradlew
-                   ./gradlew lint test
+      - attach_workspace:
+          at: ~/cubiVue
+
       - run:
           name: Run UnitTest
           command: |
@@ -71,6 +69,9 @@ jobs:
   test_instrumented:
     <<: *android_config
     steps:
+      - attach_workspace:
+          at: ~/cubiVue
+
       - run:
           name: Setup emulator
           command: sdkmanager "system-images;android-22;default;armeabi-v7a" && echo "no" | avdmanager create avd -n test -k "system-images;android-22;default;armeabi-v7a"
