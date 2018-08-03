@@ -5,6 +5,7 @@ references:
       working_directory: ~/repo
       docker:
         - image: circleci/android:api-28-alpha
+        - image: circleci/openjdk:8-jdk
       environment:
         ANDROID_HOME: /usr/local/android-sdk-linux
         TERM: dumb
