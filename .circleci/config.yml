@@ -22,6 +22,12 @@ jobs:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
 
+    dependencies:
+      pre:
+        - wget "https://services.gradle.org/distributions/gradle-4.9-bin.zip"; unzip gradle-4.9-bin.zip
+        - echo y | android update sdk --no-ui --all --filter tool,extra-android-m2repository,extra-android-support,extra-google-google_play_services,extra-google-m2repository,android-28
+        - echo y | android update sdk --no-ui --all --filter build-tools-28.0.0
+
     steps:
       - checkout
 
@@ -39,13 +45,19 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
-      test:
-        override:
-          - emulator -avd circleci-android24 -no-window:
-              background: true
-              parallel: true
-          - circle-android wait-for-boot
-
-          # run tests  against the emulator.
-          - ./gradlew connectedAndroidTest
+    test:
+      override:
+        - emulator -avd circleci-android24 -no-audio -no-window:
+            background: true
+            parallel: true
+        - circle-android wait-for-boot
+        # unlock the emulator screen
+        - sleep 30
+        - adb shell input keyevent 82
+        # run tests  against the emulator.
+        - ./gradlew connectedAndroidTest -PdisablePreDex
+        # copy the build outputs to artifacts
+        - cp -r app/build/outputs $CIRCLE_ARTIFACTS
+        # copy the test results to the test results directory.
+        - cp -r app/build/outputs/androidTest-results/* $CIRCLE_TEST_REPORTS
 
