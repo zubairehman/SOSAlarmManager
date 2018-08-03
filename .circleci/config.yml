@@ -29,8 +29,8 @@ jobs:
       - run:
           name: Download Dependencies
           command: |
-            sudo chmod +x ./gradlew
             cd android; ./gradlew androidDependencies
+            sudo chmod +x ./gradlew
 
       - save_cache:
           paths:
@@ -91,7 +91,9 @@ workflows:
   workflow:
     jobs:
       - build_debug
-      - test_unit
+      - test_unit:
+          requires:
+            - build_debug
       - test_instrumented:
           requires:
             - build_debug
