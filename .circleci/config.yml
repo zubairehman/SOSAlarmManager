@@ -2,7 +2,7 @@ version: 2
 references:
     # We will define reusable references here
     android_config: &android_config
-      working_directory: ~/repo
+      working_directory: ~/cubiVue
       docker:
         - image: circleci/android:api-28-node8-alpha
       environment:
@@ -18,6 +18,10 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+
+      - run:
+         name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
+         command: sudo chmod +x ./gradlew
 
       - run:
           name: Download Dependencies
@@ -40,6 +44,9 @@ jobs:
   test_unit:
     <<: *android_config
     steps:
+      - run:
+          name: Run Tests
+          command: ./gradlew lint test
       - run:
           name: Run UnitTest
           command: ./gradlew testDemoDebugUnitTest
