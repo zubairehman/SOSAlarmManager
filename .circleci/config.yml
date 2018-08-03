@@ -2,20 +2,14 @@ version: 2
 references:
     # We will define reusable references here
     android_config: &android_config
-      working_directory: ~/repo
+      working_directory: ~/repo/android
       docker:
-        #- image: circleci/android:api-28-alpha
-        - image: circleci/openjdk:8-jdk
+        - image: circleci/android:api-28-alpha
       environment:
         ANDROID_HOME: /usr/local/android-sdk-linux
         TERM: dumb
         _JAVA_OPTIONS: "-Xmx3200m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
         GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m"'
-      dependencies:
-        pre:
-          - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-28.0.0,android-28,extra-google-m2repository,extra-google-google_play_services,extra-android-support,extra-libs/android-support-v7-cardview.jar,extra-libraryForFloatingButton,extra-libs/engine.io-client-0.5.0.jar,extra-libs/httpmime-4.2.5.jar,extra-libs/okhttp-2.3.0.jar,extra-libs/okhttp-ws-2.3.0.jar,extra-libs/okio-1.3.0.jar,extra-libs/socket.io-client-0.5.0.jar,extra-com.crashlytics.sdk.android:crashlytics:2.5.5@aar
-          - chmod +x gradlew
-          - ANDROID_HOME = /usr/local/android-sdk-linux ./gradlew dependencies
 
 jobs:
   # Build debug APK for unit tests and an instrumented test APK
@@ -29,9 +23,14 @@ jobs:
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
 
+      - attach_workspace:
+          at: ~/repo
+
       - run:
           name: Download Dependencies
-          command: ./gradlew androidDependencies
+          command: |
+            sudo chmod +x ./gradlew
+            ./gradlew androidDependencies
 
       - save_cache:
           paths:
