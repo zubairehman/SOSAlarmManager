@@ -9,6 +9,8 @@ references:
         TERM: dumb
         _JAVA_OPTIONS: "-Xmx3200m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
         GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m"'
+      general:
+        build_dir: /android/
 
 jobs:
   # Build debug APK for unit tests and an instrumented test APK
@@ -16,6 +18,7 @@ jobs:
     <<: *android_config
     steps:
       - checkout
+          path: ~/repo
 
       # Download and cache dependencies
       - restore_cache:
