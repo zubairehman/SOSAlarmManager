@@ -4,12 +4,8 @@ references:
     android_config: &android_config
       working_directory: ~/repo
       docker:
-        - image: circleci/android:api-25-alpha
+        - image: circleci/android:api-28-node8-alpha
       environment:
-        ANDROID_HOME: /usr/local/android-sdk-linux
-        TERM: dumb
-        _JAVA_OPTIONS: "-Xmx3200m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
-        GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m"'
         JVM_OPTS: -Xmx3200m
 
 jobs:
@@ -17,20 +13,15 @@ jobs:
   build_debug:
     <<: *android_config
     steps:
-      - checkout:
-          path: ~/repo
+      - checkout
 
       # Download and cache dependencies
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
 
-      - attach_workspace:
-          at: ~/repo
-
       - run:
           name: Download Dependencies
-          command: |
-            ./gradlew androidDependencies
+          command: ./gradlew androidDependencies
 
       - save_cache:
           paths:
@@ -60,7 +51,7 @@ jobs:
       - store_test_results:
           path: app/build/test-results
 
-  # Run unit tests
+  # Run UI tests
   test_instrumented:
     <<: *android_config
     steps:
@@ -97,12 +88,3 @@ workflows:
       - test_instrumented:
           requires:
             - build_debug
-      #- deploy:
-       #   filters:
-        #    branches:
-         #     only:
-          #      - master
-          #requires:
-           # - build_release
-            #- test_unit
-            #- test_instrumented
