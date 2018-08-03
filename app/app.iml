@@ -49,7 +49,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes" />
     <output-test url="file://$MODULE_DIR$/build/intermediates/javac/debugUnitTest/compileDebugUnitTestJavaWithJavac/classes" />
     <exclude-output />
@@ -186,6 +186,5 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:monitor-1.1.0-alpha3" level="project" />
     <orderEntry type="library" name="Gradle: androidx.core:core-1.0.0-alpha1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: net.sf.kxml:kxml2:2.3.0@jar" level="project" />
-    <orderEntry type="module" module-name="base" />
   </component>
 </module>
