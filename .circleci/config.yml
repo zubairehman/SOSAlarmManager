@@ -49,6 +49,9 @@ jobs:
   test_unit:
     <<: *android_config
     steps:
+      - checkout:
+              path: ~/cubiVue
+
       - attach_workspace:
           at: ~/cubiVue
 
@@ -69,6 +72,9 @@ jobs:
   test_instrumented:
     <<: *android_config
     steps:
+      - checkout:
+                path: ~/cubiVue
+
       - attach_workspace:
           at: ~/cubiVue
 
