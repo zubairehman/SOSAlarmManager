@@ -23,11 +23,6 @@ jobs:
     
     steps:
       - checkout
-      
-      pre:
-      - sudo add-apt-repository ppa:cwchien/gradle -y
-      - sudo apt-get update
-      - sudo apt-get install gradle-4.8-all
 
       # Download and cache dependencies
       - restore_cache:
