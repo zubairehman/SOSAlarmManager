@@ -100,10 +100,10 @@ workflows:
   version: 2
   workflow:
     jobs:
-      - build_debug
-      - test_unit:
-          requires:
-            - build_debug
-      - test_instrumented:
-          requires:
-            - build_debug
+      #- build_debug
+      - test_unit
+          #requires:
+           # - build_debug
+      #- test_instrumented:
+       #   requires:
+        #    - build_debug
