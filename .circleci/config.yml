@@ -2,30 +2,37 @@ version: 2
 references:
     # We will define reusable references here
     android_config: &android_config
-      working_directory: ~/cubiVue
+      working_directory: ~/cubiVue/android
       docker:
         - image: circleci/android:api-28-node8-alpha
       environment:
-        JVM_OPTS: -Xmx3200m
+        JVM_OPTS: -Xmx4G
+        TERM: dumb # Use dumb terminal to avoid weird output from Gradle
+        _JAVA_OPTIONS: "-Xmx2048m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
+        GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m"'
 
 jobs:
   # Build debug APK for unit tests and an instrumented test APK
   build_debug:
     <<: *android_config
     steps:
-      - checkout
+      - checkout:
+          path: ~/cubiVue
 
       # Download and cache dependencies
       - restore_cache:
+          paths:
+              - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
 
-      - run:
-         name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
-         command: sudo chmod +x ./gradlew
+      - attach_workspace:
+          at: ~/cubiVue
 
       - run:
           name: Download Dependencies
-          command: ./gradlew androidDependencies
+          command: |
+                   sudo chmod +x gradlew
+                   ./gradlew androidDependencies
 
       - save_cache:
           paths:
