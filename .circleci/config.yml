@@ -7,24 +7,29 @@ references:
         - image: circleci/android:api-28-alpha
       environment:
         TERM: dumb
-        _JAVA_OPTIONS: "-Xmx2048m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
+        _JAVA_OPTIONS: "-Xmx3200m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
         GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m"'
+
 jobs:
   # Build debug APK for unit tests and an instrumented test APK
   build_debug:
     <<: *android_config
     steps:
       - checkout
+
+      # Download and cache dependencies
       - restore_cache:
-              key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-      - run:
-          name: Download dependencies
-          command: ./gradlew androidDependencies
+          keys:
+          - v1-dependencies-{{ checksum "build.gradle" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: gradle dependencies
 
       - save_cache:
           paths:
             - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+          key: v1-dependencies-{{ checksum "build.gradle" }}
 
       - run:
           name: Gradle build (debug)
