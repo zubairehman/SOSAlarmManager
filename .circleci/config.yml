@@ -4,12 +4,13 @@ references:
     android_config: &android_config
       working_directory: ~/repo
       docker:
-        - image: circleci/android:api-25
+        - image: circleci/android:api-25-alpha
       environment:
         ANDROID_HOME: /usr/local/android-sdk-linux
         TERM: dumb
         _JAVA_OPTIONS: "-Xmx3200m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
         GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m"'
+        JVM_OPTS: -Xmx3200m
 
 jobs:
   # Build debug APK for unit tests and an instrumented test APK
