@@ -3,14 +3,14 @@ version: 2
 references:
     # We will define reusable references here
     android_config: &android_config
-    working_directory: ~/repo
-    docker:
-      - image: circleci/android:api-28-alpha
+      working_directory: ~/repo
+      docker:
+        - image: circleci/android:api-28-alpha
 
-    environment:
-      TERM: dumb
-      _JAVA_OPTIONS: "-Xmx2048m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
-      GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m"'
+      environment:
+        TERM: dumb
+        _JAVA_OPTIONS: "-Xmx2048m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
+        GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m"'
 
 jobs:
 
