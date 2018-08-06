@@ -1,11 +1,10 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "com.cubivue.app"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -14,29 +13,11 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-        disable 'RestrictedApi'
-    }
-    buildTypes {
-        debug{
 
-        }
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     //Support Libraries
@@ -47,7 +28,4 @@ dependencies {
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.testRunner
     androidTestImplementation testDependencies.espressoCore
-
-    //Base Module
-    implementation project(":base")
 }
