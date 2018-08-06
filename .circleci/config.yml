@@ -80,6 +80,11 @@ jobs:
       - checkout:
                 path: ~/cubiVue
 
+      - restore_cache:
+                paths:
+                  - ~/.gradle
+                key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+
       - attach_workspace:
           at: ~/cubiVue
 
@@ -111,10 +116,8 @@ workflows:
   version: 2
   workflow:
     jobs:
-      #- build_debug
       - test_unit
-          #requires:
-           # - build_debug
+      # - build_debug
       #- test_instrumented:
        #   requires:
         #    - build_debug
