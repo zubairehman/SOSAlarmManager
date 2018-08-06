@@ -4,7 +4,42 @@
 apply from: 'base/dependencies.gradle'
 
 buildscript {
-    ext.kotlin_version = '1.2.50'
+    ext.kotlin_version = '1.2.51'
+
+    //Dependencies defined here will be common for all modules added in this project
+    ext.sharedGroup = {dependencyHandler->
+        delegate = dependencyHandler
+
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+        //Support Libraries
+        implementation supportDependencies.appCompat
+        implementation supportDependencies.constraint
+        implementation supportDependencies.lifeCycle
+
+        //Dagger
+        implementation daggerDependencies.dagger
+        implementation daggerDependencies.daggerSupport
+
+        //kapt
+        kapt daggerDependencies.daggerCompiler
+        kapt daggerDependencies.daggerProcessor
+
+        //Rx
+        implementation reactiveDependencies.values()
+
+        //RestClient
+        implementation retrofitDependencies.values()
+
+        //Logging
+        implementation timber
+
+        //Test Libraries
+        testImplementation testDependencies.junit
+        androidTestImplementation testDependencies.testRunner
+        androidTestImplementation testDependencies.espressoCore
+    }
 
     repositories {
         jcenter()
@@ -14,6 +49,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.0-alpha04'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "io.realm:realm-gradle-plugin:5.2.0"
     }
 }
 
@@ -22,6 +58,7 @@ allprojects {
     repositories {
         jcenter()
         maven { url 'https://maven.google.com' }
+        maven { url 'https://jitpack.io' }
     }
 }
 

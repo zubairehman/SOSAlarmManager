@@ -1,15 +1,24 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+
 android {
     compileSdkVersion 28
 
     defaultConfig {
         applicationId "com.cubivue.app"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+
+        //Gradle Configuration Constants
+        buildConfigField 'String', 'BASE_URL', BASE_URL
+        buildConfigField 'String', 'DB_NAME', DB_NAME
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -36,18 +45,12 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    //Support Libraries
-    implementation xDependencies.appCompatX
-    implementation xDependencies.constraintX
-
-    //Test Libraries
-    testImplementation testDependencies.junit
-    androidTestImplementation testDependencies.testRunner
-    androidTestImplementation testDependencies.espressoCore
+    //Load All Dependencies
+    sharedGroup dependencies
 
     //Base Module
     implementation project(":base")
+    implementation("org.jetbrains:annotations:16.0.1")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.50")
 }

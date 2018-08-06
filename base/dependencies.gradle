@@ -88,6 +88,7 @@ ext {
             cardViewX         : "androidx.cardview:cardview:${androidxVersion}",
             appCompatX        : "androidx.appcompat:appcompat:${androidxVersion}",
             supportAnnotationX: "androidx.annotation:annotation:${androidxVersion}",
+            xFragment         : "androidx.fragment:fragment:${androidxVersion}",
             constraintX       : "androidx.constraintlayout:constraintlayout:${constraintVersion}",
             lifeCycleX        : "androidx.lifecycle:lifecycle-extensions:${lifeCycleXVersion}",
     ]
@@ -100,6 +101,7 @@ ext {
             appCompat        : "com.android.support:appcompat-v7:${supportLibraryVersion}",
             supportAnnotation: "com.android.support:support-annotations:${supportLibraryVersion}",
             supportFragment  : "com.android.support:support-fragment:${supportLibraryVersion}",
+            supportv4        : "com.android.support:support-core-utils:${supportLibraryVersion}",
             constraint       : "com.android.support.constraint:constraint-layout:${constraintVersion}",
             lifeCycle        : "android.arch.lifecycle:extensions:${lifeCycleVersion}",
     ]
