@@ -21,6 +21,7 @@ android {
         buildConfigField 'String', 'DB_NAME', DB_NAME
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
 
     }
     lintOptions {
@@ -29,7 +30,7 @@ android {
         disable 'RestrictedApi'
     }
     buildTypes {
-        debug{
+        debug {
 
         }
         release {
@@ -41,6 +42,15 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    testOptions { //used for Orchestrator
+        execution "ANDROID_TEST_ORCHESTRATOR"
+        unitTests{
+            includeAndroidResources true
+            returnDefaultValues = true
+        }
     }
 }
 

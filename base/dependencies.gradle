@@ -38,14 +38,6 @@ ext {
     flexibleAdapterVersion = '5.0.5'
     flexibleAdapterUIVersion = '1.0.0-b5'
 
-    //Test
-    junitVersion = '4.12'
-    testRunnerVersion = '1.1.0-alpha3'
-    espressoCoreVersion = '3.1.0-alpha3'
-    roboElectricVersion = '3.5.1'
-    hamcrestVersion = '1.3'
-    powerMockVersion = '1.6.1'
-
     //Dagger
     daggerVersion = '2.16'
 
@@ -75,6 +67,16 @@ ext {
     azureMobileVersion = '3.1.0'
     azureNotificationsVersion = '1.0.1@aar'
     azureSDKVersion = '0.4@aar'
+
+    //Test
+    junitVersion = '4.12'
+    testRunnerVersion = '1.0.2'
+    espressoCoreVersion = '3.1.0-alpha3'
+    hamcrestVersion = '1.3'
+    powerMockVersion = '1.6.5'
+    roboElectricSnapshotVersion = '4.0-alpha-3-SNAPSHOT'
+    roboElectricVersion = '3.4-rc2'
+    mockitoVersion = '1.10.19'
 
     /******************************************
      ** Dependencies
@@ -120,16 +122,6 @@ ext {
             retrofitLogging: "com.squareup.okhttp3:logging-interceptor:${retrofitLoggingVersion}",
             gson           : "com.google.code.gson:gson:${gsonVersion}",
             okhttp3        : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
-    ]
-
-    //Tests
-    testDependencies = [
-            junit       : "junit:junit:${junitVersion}",
-            testRunner  : "androidx.test:runner:${testRunnerVersion}",
-            espressoCore: "androidx.test.espresso:espresso-core:${espressoCoreVersion}",
-            roboElectric: "org.robolectric:robolectric:${roboElectricVersion}",
-            hamcrest    : "org.hamcrest:hamcrest-library:${hamcrestVersion}",
-            powerMock   : "org.powermock:powermock-mockito-release-full:${powerMockVersion}",
     ]
 
     //Image
@@ -189,6 +181,23 @@ ext {
 
     //Crashlytics
     crashlytics = "com.crashlytics.sdk.android:crashlytics:${crashlyticsVersion}"
+
+    //Tests
+    testDependencies = [
+            junit                    : "junit:junit:${junitVersion}",
+            testRules                : "com.android.support.test:rules:${junitVersion}",
+            testRunner               : "androidx.test:runner:${testRunnerVersion}",
+            orchestrator             : "com.android.support.test:orchestrator:${testRunnerVersion}",
+            espressoCore             : "androidx.test.espresso:espresso-core:${espressoCoreVersion}",
+            hamcrest                 : "org.hamcrest:hamcrest-library:${hamcrestVersion}",
+            powerMock                : "org.powermock:powermock-module-junit4:${powerMockVersion}",
+            powerMockRules           : "org.powermock:powermock-module-junit4-rule:${powerMockVersion}",
+            powerMockMockito         : "org.powermock:powermock-api-mockito:${powerMockVersion}",
+            powerMockXStream         : "org.powermock:powermock-classloading-xstream:${powerMockVersion}",
+            roboElectric             : "org.robolectric:robolectric:${roboElectricSnapshotVersion}",
+            roboElectricShadowSupport: "org.robolectric:shadows-support-v4:${roboElectricVersion}",
+            mockito                  : "org.mockito:mockito-core:${mockitoVersion}",
+    ]
 }
 /*****************************************************************
  ** Note: Use this to add complete array as dependency at once:

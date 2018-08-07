@@ -26,9 +26,10 @@ class App : Application() , HasActivityInjector {
 
         DaggerAppComponent
                 .builder()
+                .baseUrl(BuildConfig.BASE_URL)
                 .application(this)
                 .build()
-                .inject(this);
+                .inject(this)
     }
 
     override fun activityInjector(): AndroidInjector<Activity> {

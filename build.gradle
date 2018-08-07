@@ -24,6 +24,7 @@ buildscript {
 
         //kapt
         kapt daggerDependencies.daggerCompiler
+        kaptTest daggerDependencies.daggerCompiler
         kapt daggerDependencies.daggerProcessor
 
         //Rx
@@ -37,8 +38,17 @@ buildscript {
 
         //Test Libraries
         testImplementation testDependencies.junit
+        //testImplementation testDependencies.testRules
         androidTestImplementation testDependencies.testRunner
         androidTestImplementation testDependencies.espressoCore
+        androidTestUtil testDependencies.orchestrator
+        testImplementation testDependencies.roboElectric
+        testImplementation testDependencies.roboElectricShadowSupport
+        testImplementation testDependencies.powerMock
+        testImplementation testDependencies.powerMockRules
+        testImplementation testDependencies.powerMockMockito
+        testImplementation testDependencies.powerMockXStream
+        testImplementation testDependencies.mockito
     }
 
     repositories {
@@ -59,6 +69,7 @@ allprojects {
         jcenter()
         maven { url 'https://maven.google.com' }
         maven { url 'https://jitpack.io' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
     }
 }
 
