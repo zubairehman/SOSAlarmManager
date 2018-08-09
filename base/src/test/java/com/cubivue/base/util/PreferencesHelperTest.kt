@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.cubivue.base.BuildConfig
 import com.cubivue.base.models.SharedPreferenceEntry
+import com.cubivue.base.util.preference.PreferencesHelper
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.CoreMatchers.equalTo
 import org.hamcrest.MatcherAssert.assertThat

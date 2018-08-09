@@ -17,6 +17,8 @@ buildscript {
         implementation supportDependencies.appCompat
         implementation supportDependencies.constraint
         implementation supportDependencies.lifeCycle
+        implementation supportDependencies.supportv13
+
 
         //Dagger
         implementation daggerDependencies.dagger

@@ -3,6 +3,7 @@ package com.cubivue.app
 import android.app.Activity
 import android.app.Application
 import com.cubivue.app.di.DaggerAppComponent
+import com.cubivue.base.util.preference.PreferencesHelper
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -30,6 +31,9 @@ class App : Application() , HasActivityInjector {
                 .application(this)
                 .build()
                 .inject(this)
+
+        //init shared preference
+        PreferencesHelper.initializeInstance(this)
     }
 
     override fun activityInjector(): AndroidInjector<Activity> {
