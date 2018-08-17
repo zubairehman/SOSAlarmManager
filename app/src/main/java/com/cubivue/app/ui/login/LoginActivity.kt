@@ -1,14 +1,17 @@
 package com.cubivue.app.ui.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import com.cubivue.app.R
+import com.cubivue.app.ui.settings.SettingsActivity
 import com.cubivue.base.baseUi.BaseActivity
 import com.cubivue.base.util.permissions.PermissionManager
 import com.cubivue.base.util.permissions.PermissionUtils
 import com.cubivue.base.util.permissions.enums.PermissionEnum
 import com.cubivue.base.util.permissions.interfaces.FullCallback
 import com.cubivue.base.util.preference.PreferencesHelper
+import kotlinx.android.synthetic.main.activity_login.*
 import java.util.*
 
 class LoginActivity : BaseActivity(), FullCallback {
@@ -28,6 +31,12 @@ class LoginActivity : BaseActivity(), FullCallback {
 
         } else {
             requestStoragePermissions()
+        }
+
+        //preference activity test
+        tvHelloWorld.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
         }
     }
 

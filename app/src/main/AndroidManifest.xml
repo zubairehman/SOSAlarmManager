@@ -23,6 +23,13 @@
             </intent-filter>
         </activity>
 
+
+        <activity android:name=".ui.settings.SettingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.login.LoginActivity" />
+        </activity>
+
     </application>
 
 </manifest>
