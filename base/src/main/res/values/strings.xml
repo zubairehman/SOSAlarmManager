@@ -3,6 +3,10 @@
     <string name="permission_confirmation">You have denied storage access permission. Please visit settings and enable storage permission to enjoy full features of this app</string>
 
     <!-- Strings for PreferenceActivity -->
+    <string name="pa_title_info_message">Info Messages</string>
+    <string name="pa_title_warning_message">Warning Messages</string>
+    <string name="pa_title_display">Display</string>
+    <string name="pa_title_night_mode">Night Mode</string>
     <string name="activity_preference_title">Preferences</string>
     <string name="restore_defaults_dialog_title">Restore defaults?</string>
     <string name="restore_defaults_dialog_message">Do you really want to restore the default values?</string>

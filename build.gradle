@@ -19,7 +19,6 @@ buildscript {
         implementation supportDependencies.lifeCycle
         implementation supportDependencies.supportv13
 
-
         //Dagger
         implementation daggerDependencies.dagger
         implementation daggerDependencies.daggerSupport
@@ -51,6 +50,9 @@ buildscript {
         testImplementation testDependencies.powerMockMockito
         testImplementation testDependencies.powerMockXStream
         testImplementation testDependencies.mockito
+
+        //preference module
+        implementation project(":preference")
     }
 
     repositories {

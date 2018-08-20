@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">CubiVue App</string>
+
+    <!-- Preference Activity -->
+    <string name="pa_title_language">Language</string>
+    <string name="pa_title_default_language">Default Language</string>
+    <string name="pa_title_navigation">Navigation</string>
+    <string name="pa_title_default_mode">Default Mode</string>
+
+    <!-- Language -->
+    <string name="pref_lang_english" translatable="false">English</string>
+    <string name="pref_lang_danish" translatable="false">Danish</string>
+
+    <string-array name="pref_array_language">
+        <item>@string/pref_lang_english</item>
+        <item>@string/pref_lang_danish</item>
+    </string-array>
+
+    <!-- Modes -->
+    <string name="pref_nav_driving">Driving</string>
+    <string name="pref_nav_bicycling">Bicycling</string>
+    <string name="pref_nav_walking">Walking</string>
+
+    <string-array name="pref_array_nav_modes">
+        <item>@string/pref_nav_walking</item>
+        <item>@string/pref_nav_bicycling</item>
+        <item>@string/pref_nav_driving</item>
+    </string-array>
 </resources>

@@ -61,22 +61,28 @@ public class PreferenceBuilder {
         return preference;
     }
 
-    public EditTextPreference createEditTextPreference(Context context, String key, String title, String summary) {
+    public EditTextPreference createEditTextPreference(Context context, String key, String title, String summary, String dialogTitle, String dialogMessage, int layoutId) {
         EditTextPreference preference = new EditTextPreference(context);
         preference.setKey(key);
         preference.setTitle(title);
         preference.setFragment(NewPreferenceHeaderFragment.class.getName());
+        preference.setPersistent(true);
+        preference.setDialogTitle(dialogTitle);
+        preference.setDialogMessage(dialogMessage);
+        preference.setDialogLayoutResource(layoutId);
         preference.setSummary(summary);
 
         return preference;
     }
 
-    public ListPreference createListPreference(Context context, String key, String title, String summary) {
+    public ListPreference createListPreference(Context context, String key, String title, String summary, int entries) {
         ListPreference preference = new ListPreference(context);
         preference.setKey(key);
         preference.setTitle(title);
         preference.setFragment(NewPreferenceHeaderFragment.class.getName());
         preference.setSummary(summary);
+        preference.setEntries(entries);
+        preference.setEntryValues(entries);
 
         return preference;
     }

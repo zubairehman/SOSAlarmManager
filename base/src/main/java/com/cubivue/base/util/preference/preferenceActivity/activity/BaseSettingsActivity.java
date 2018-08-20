@@ -16,17 +16,14 @@ package com.cubivue.base.util.preference.preferenceActivity.activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.CheckBoxPreference;
-import android.support.v7.preference.EditTextPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
 import android.support.v7.preference.PreferenceScreen;
 import android.util.Log;
 
+import com.cubivue.base.BuildConfig;
 import com.cubivue.base.R;
 import com.cubivue.base.util.preference.preferenceActivity.builder.PreferenceBuilder;
-import com.cubivue.base.util.preference.preferenceActivity.fragment.NewPreferenceHeaderFragment;
 
 import de.mrapp.android.preference.activity.NavigationPreference;
 import de.mrapp.android.preference.activity.PreferenceActivity;
@@ -40,7 +37,16 @@ import de.mrapp.android.preference.activity.PreferenceActivity;
 public class BaseSettingsActivity extends AbstractPreferenceActivity
         implements SharedPreferences.OnSharedPreferenceChangeListener {
 
+    //static variables
     private static final String TAG = BaseSettingsActivity.class.getSimpleName();
+
+    //keys
+    private static final String BASE_PACKAGE_NAME = BuildConfig.APPLICATION_ID;
+    private static final String KEY_INFO_MESSAGE = BASE_PACKAGE_NAME + "INFO_MESSAGE";
+    private static final String KEY_WARNING_MESSAGE = BASE_PACKAGE_NAME + "WARNING_MESSAGE";
+    private static final String KEY_DISPLAY_MODE = BASE_PACKAGE_NAME + "DISPLAY_MODE";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,36 +79,18 @@ public class BaseSettingsActivity extends AbstractPreferenceActivity
     }
 
     /**
-     * Dynamically adds a new navigation preference to the activity.
+     * Dynamically adds a new preference to the activity.
      */
-    public void addNavigationPreference() {
-
-        //adding category
-
-        //adding preference
-        SwitchPreference infoMessagePref = new SwitchPreference(this);
-        infoMessagePref.setTitle(getPreferenceHeaderTitle());
-        infoMessagePref.setKey("info");
-        infoMessagePref.setFragment(NewPreferenceHeaderFragment.class.getName());
-        infoMessagePref.setSummary("Test Summary");
-
-        CheckBoxPreference warningMessagePref = new CheckBoxPreference(this);
-        warningMessagePref.setTitle(getPreferenceHeaderTitle());
-        warningMessagePref.setKey("warnindg");
-        warningMessagePref.setFragment(NewPreferenceHeaderFragment.class.getName());
-        warningMessagePref.setSummary("Test Summary");
-
-        EditTextPreference preference = new EditTextPreference(this);
-        preference.setTitle(getPreferenceHeaderTitle());
-        preference.setKey("warningw");
-        preference.setFragment(NewPreferenceHeaderFragment.class.getName());
-        preference.setSummary("Test Summary");
-
+    public void addPreference() {
         //adding pref to screen
-        addPreference(PreferenceBuilder.getInstance().createPreferenceCategory(this, "Info Message"));
-//        addPreference(PreferenceBuilder.getInstance().createSwitchPreference(this, "Info Message"));
-        addPreference(warningMessagePref);
-        addPreference(preference);
+        //info Messages
+        addPreference(PreferenceBuilder.getInstance().createPreferenceCategory(this, getString(R.string.pa_title_info_message)));
+        addPreference(PreferenceBuilder.getInstance().createSwitchPreference(this, KEY_INFO_MESSAGE, getString(R.string.pa_title_info_message), "Test Summary"));
+        addPreference(PreferenceBuilder.getInstance().createSwitchPreference(this, KEY_WARNING_MESSAGE, getString(R.string.pa_title_warning_message), "Test Summary"));
+
+        //Display
+        addPreference(PreferenceBuilder.getInstance().createPreferenceCategory(this, getString(R.string.pa_title_display)));
+        addPreference(PreferenceBuilder.getInstance().createSwitchPreference(this, KEY_DISPLAY_MODE, getString(R.string.pa_title_night_mode), "Test Summary"));
     }
 
     public void addPreference(Preference preference) {
