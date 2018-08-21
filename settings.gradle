@@ -1,4 +1,4 @@
-include ':app', ':base'
+include ':app', ':base', ':preference'
 //include ':base'
 //project(':base').projectDir = new File(settingsDir, '../CubiVue Base/base')
 
