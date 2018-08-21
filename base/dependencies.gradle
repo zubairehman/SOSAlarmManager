@@ -68,6 +68,9 @@ ext {
     azureNotificationsVersion = '1.0.1@aar'
     azureSDKVersion = '0.4@aar'
 
+    //Realm
+    realmEncryptionHelperVersion = '1.0.2'
+
     //Test
     junitVersion = '4.12'
     testRunnerVersion = '1.0.2'
@@ -182,6 +185,9 @@ ext {
     //Crashlytics
     crashlytics = "com.crashlytics.sdk.android:crashlytics:${crashlyticsVersion}"
 
+    //RealmEncryption
+    realmEncryptionHelper = "com.github.tntkhang:realm-encryption-helper:${realmEncryptionHelperVersion}"
+
     //Tests
     testDependencies = [
             junit                    : "junit:junit:${junitVersion}",
@@ -197,6 +203,7 @@ ext {
             roboElectric             : "org.robolectric:robolectric:${roboElectricSnapshotVersion}",
             roboElectricShadowSupport: "org.robolectric:shadows-support-v4:${roboElectricVersion}",
             mockito                  : "org.mockito:mockito-core:${mockitoVersion}",
+            mockwebserver            : "com.squareup.okhttp3:mockwebserver:${okhttpVersion}",
     ]
 }
 /*****************************************************************

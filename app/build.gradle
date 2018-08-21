@@ -54,6 +54,10 @@ android {
     }
 }
 
+kapt {
+    generateStubs = true
+}
+
 dependencies {
 
     //Load All Dependencies

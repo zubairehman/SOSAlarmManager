@@ -1,5 +1,6 @@
 package com.cubivue.base.di
 
+import com.cubivue.base.data.local.RealmHelper
 import com.michaelflisar.rxbus2.RxBus
 import com.michaelflisar.rxbus2.RxBusSenderBuilder
 import dagger.Module
@@ -14,5 +15,11 @@ class AppModule {
     @Singleton
     fun provideRxBus(): RxBusSenderBuilder {
         return RxBus.get()
+    }
+
+    @Provides
+    @Singleton
+    fun provideRealmHelper(): RealmHelper {
+        return RealmHelper()
     }
 }
