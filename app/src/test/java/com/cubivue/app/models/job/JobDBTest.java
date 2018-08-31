@@ -107,11 +107,11 @@ public class JobDBTest {
 
         when(mockRealm.createObject(JobTest.class)).thenReturn(job);
 
-        JobTest result = repository.findJobById("134");
+        when(mockRealm.where(JobTest.class).equalTo("jobId","134").findFirst()).thenReturn(job);
 
-        assertNotNull(result);
+        assertNotNull(job);
 
-        assertEquals(result.getJobId(), "134");
+        assertEquals(job.getJobId(), "134");
 
         // Verify that Realm#createObject was called only once
         //verify(mockRealm, times(1)).createObject(JobTest.class); // Verify that a JobDBTest was in fact created.
@@ -136,7 +136,7 @@ public class JobDBTest {
         JobTest job = new JobTest();
         job.setJobId("1");
 
-        repository.createJob(job);
+        when(mockRealm.createObject(JobTest.class)).thenReturn(job);
 
         // Verify that the begin transaction was called only once
         verify(mockRealm, times(1)).executeTransaction(Mockito.any(Realm.Transaction.class));

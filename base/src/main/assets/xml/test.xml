@@ -1,0 +1,32 @@
+<job job-id="1060" job-name="1060" date="04-07-2018">
+    <info>
+        <info-unit type="subscription-summary">RELAGS 3-Delt Bestik~1;WILDO Camp-A-Box Basic Olive~1;POP UP Grill~1;WILDO Camp-A-Box Basic Lime~1;ASIVIK Trekker 70~50;ASIVIK Evamat 9½mmLiggeunderla~40;Knob og Stik~1;Knobbånd 125cm~1;</info-unit>
+    </info>
+    <main>
+        <task-list task-list-id="1060-a-0001" order-no="W0310550">
+            <task-list task-list-id="1060-a-0001-0001">
+                <info>
+                    <info-unit type="product-summary">RELAGS 3-Delt Bestik~1;WILDO Camp-A-Box Basic Olive~1;WILDO Camp-A-Box Basic Lime~1;</info-unit>
+                </info>
+                <task-list task-list-id="1060-a-0001-0001-0001">
+                    <task-list task-list-id="1060-a-0001-0001-0001-0001">
+                        <task task-id="W0310550-30000" order-line-no="30000" sort-order="61">
+                            <address>
+                                <location>10090</location>
+                            </address>
+                            <item quantity="1">
+                                <item-id>359080</item-id>
+                                <item-name>RELAGS 3-Delt Bestik</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="barcode">2910000012898;359080;4021504011602</info-unit>
+                                </info>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+    </main>
+</job>
