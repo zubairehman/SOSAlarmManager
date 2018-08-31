@@ -10,30 +10,48 @@ import java.io.IOException
 @Throws(XmlPullParserException::class, IOException::class)
 internal fun readJobXML(parser: XmlPullParser): Job {
 
-    parser.require(XmlPullParser.START_TAG, ns, TAG_JOB)
+    var eventType = parser.eventType
 
-    var jobAttrs: Triple<String, String, String>? = null
+    var job: Job? = null
+    var jobAttrs: Triple<String, String, String> = Triple("", "", "")
     var info: Info? = null
+    val infoUnit: ArrayList<InfoUnit> = arrayListOf()
 
-    while (parser.next() != XmlPullParser.END_TAG) {
+    while (eventType != XmlPullParser.END_DOCUMENT) {
 
-        if (parser.eventType != XmlPullParser.START_TAG) {
-            continue
+        when (eventType) {
+            XmlPullParser.START_DOCUMENT -> {
+
+            }
+            XmlPullParser.START_TAG -> {
+
+                when (parser.name) {
+                    TAG_JOB -> {
+                        jobAttrs = readJobAttributes(parser)
+                    }
+                    TAG_INFO_UNIT -> {
+                        infoUnit.add(readInfoUnit(parser))
+                    }
+                    TAG_INFO -> {
+                        info = Info(infoUnit)
+                    }
+                    TAG_MAIN -> {
+                    }
+                }
+            }
+            XmlPullParser.END_TAG -> {
+                info?.info_unit = infoUnit
+                job = Job(jobAttrs.first, jobAttrs.second, jobAttrs.third, info)
+            }
+            XmlPullParser.END_DOCUMENT -> {
+
+            }
         }
-        val name = parser.name
 
-        // Starts by looking for the entry tag
-        if (name == TAG_JOB) {
-            jobAttrs = readJobAttributes(parser)
-        } else if (name == TAG_INFO) {
-            info = readInfo(parser)
-        } else if (name == TAG_MAIN) {
-            //val readInfo = readInfo(parser))
-        } else {
-            skip(parser)
-        }
+        eventType = parser.next()
     }
-    return Job(jobAttrs?.first!!, jobAttrs.second, jobAttrs.third, info!!)
+
+    return job!!
 }
 
 @Throws(IOException::class, XmlPullParserException::class)
@@ -43,18 +61,15 @@ private fun readJobAttributes(parser: XmlPullParser): Triple<String, String, Str
     var jobName = ""
     var date = ""
 
-    parser.require(XmlPullParser.START_TAG, ns, TAG_JOB)
-
     val tag = parser.name
 
     if (tag == TAG_JOB) {
-        jobId = parser.getAttributeValue(null, ATTR_JOB_ID)
-        jobName = parser.getAttributeValue(null, ATTR_JOB_NAME)
-        date = parser.getAttributeValue(null, ATTR_DATE)
+        jobId = parser.getAttributeValue("", ATTR_JOB_ID)
+        jobName = parser.getAttributeValue("", ATTR_JOB_NAME)
+        date = parser.getAttributeValue("", ATTR_DATE)
         parser.nextTag()
     }
 
-    parser.require(XmlPullParser.END_TAG, ns, TAG_JOB)
     return Triple(jobId, jobName, date)
 }
 
@@ -62,45 +77,25 @@ private fun readJobAttributes(parser: XmlPullParser): Triple<String, String, Str
 @Throws(XmlPullParserException::class, IOException::class)
 private fun readInfo(parser: XmlPullParser): Info {
 
-    parser.require(XmlPullParser.START_TAG, ns, TAG_INFO)
-
     var infoUnit: InfoUnit? = null
+    var type: String? = null
 
-    while (parser.next() != XmlPullParser.END_TAG) {
-        if (parser.eventType != XmlPullParser.START_TAG) {
-            continue
-        }
+    if (parser.name == TAG_INFO) {
 
-        val name = parser.name
-        if (name == TAG_INFO_UNIT) {
-            infoUnit = readInfoUnit(parser)
-        } else {
-            skip(parser)
-        }
+        infoUnit = type?.let { InfoUnit(type) }!!
     }
-    return Info(arrayListOf(infoUnit!!))
+
+    return infoUnit?.let { Info(listOf(infoUnit)) }!!
 }
 
 @Throws(XmlPullParserException::class, IOException::class)
 private fun readInfoUnit(parser: XmlPullParser): InfoUnit {
 
-    parser.require(XmlPullParser.START_TAG, ns, TAG_INFO_UNIT)
+    var type: String? = null
 
-    var type = ""
-
-    while (parser.next() != XmlPullParser.END_TAG) {
-        if (parser.eventType != XmlPullParser.START_TAG) {
-            continue
-        }
-
-        val name = parser.name
-        if (name == TAG_INFO_UNIT) {
-            parser.require(XmlPullParser.START_TAG, ns, TAG_INFO_UNIT)
-            type = readValues(parser)
-            parser.require(XmlPullParser.END_TAG, ns, TAG_INFO_UNIT)
-        } else {
-            skip(parser)
-        }
+    if (parser.name == TAG_INFO_UNIT) {
+        type = readValues(parser)
     }
-    return InfoUnit(type)
+
+    return type?.let { InfoUnit(type) }!!
 }

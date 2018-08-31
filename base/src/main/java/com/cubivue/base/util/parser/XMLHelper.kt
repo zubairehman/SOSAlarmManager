@@ -6,13 +6,10 @@ import org.xmlpull.v1.XmlPullParserException
 import java.io.IOException
 import java.io.InputStream
 
-
-val ns: String? = null
-
 /*
  * Read XML file as InputStream.
  */
-fun readAssetsXML(fileName: String, context: Context): InputStream {
+fun readAssetsXML(fileName: String, context: Context): InputStream? {
     val am = context.assets
     return am.open("xml/$fileName")
 }
@@ -22,9 +19,6 @@ fun readAssetsXML(fileName: String, context: Context): InputStream {
  */
 @Throws(XmlPullParserException::class, IOException::class)
 fun skip(parser: XmlPullParser) {
-    if (parser.eventType != XmlPullParser.START_TAG) {
-        throw IllegalStateException()
-    }
     var depth = 1
     while (depth != 0) {
         when (parser.next()) {

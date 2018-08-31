@@ -11,21 +11,20 @@ import java.io.InputStream
 
 class XMLParser {
 
-    fun parseXML(name: String, context: Context) {
+    fun parseJobXML(name: String, context: Context): Job? {
         val ins = readAssetsXML(name, context)
-        parse(ins)
+        return parse(ins)
     }
 
     @Throws(XmlPullParserException::class, IOException::class)
-    fun parse(inputStream: InputStream): Job {
+    private fun parse(inputStream: InputStream?): Job {
         try {
             val parser = Xml.newPullParser()
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false)
             parser.setInput(inputStream, null)
-            parser.nextTag()
             return readJobXML(parser)
         } finally {
-            inputStream.close()
+            inputStream?.close()
         }
     }
 
