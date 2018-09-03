@@ -1,165 +1,146 @@
 package com.cubivue.base.util.parser
 
 import com.cubivue.base.models.job.xml.*
-import org.xmlpull.v1.XmlPullParser
-import org.xmlpull.v1.XmlPullParserException
-import java.io.IOException
+import org.xml.sax.Attributes
+import org.xml.sax.SAXException
+import org.xml.sax.helpers.DefaultHandler
 
-@Throws(XmlPullParserException::class, IOException::class)
-internal fun readJobXML(parser: XmlPullParser, jobXml: JobXMLStructure): Job {
+internal fun readJobXML(jobXml: JobXMLStructure): DefaultHandler {
 
-    var eventType = parser.eventType
+    return object : DefaultHandler() {
 
-    var job: Job? = null
-    var jobAttrs = arrayListOf<String>()
-    var info: Info? = null
-    val taskList = arrayListOf<TaskList>()
-    val tasks = arrayListOf<Task>()
-    val infoUnit = arrayListOf<InfoUnit>()
+        //Job
+        var job: Job? = null
+        var jobAttrs: ArrayList<String>? = null
 
-    var taskListItem: TaskList? = null
-    var taskItem: Task? = null
+        //Info
+        var info: Info? = null
+        var jobInfoSummary: ArrayList<String>? = null
 
-    while (eventType != XmlPullParser.END_DOCUMENT) {
+        //Main
+        val parentTaskList = arrayListOf<TaskList>()
+        val infoUnit = arrayListOf<InfoUnit>()
 
-        when (eventType) {
-            XmlPullParser.START_DOCUMENT -> {
+        //Temp Variables
+        var singleTaskListCollection: ArrayList<TaskList>? = null
 
-            }
-            XmlPullParser.START_TAG -> {
+        //SAX Parser Variables
+        var currentValue = ""
+        var currentElement = false
+        var currentInfo = ""
 
-                when (parser.name) {
-                    TAG_JOB -> {
-                        jobXml.job_Attrs?.let {
-                            jobAttrs = readJobAttributes(parser, it)
-                        }
+        // This method is invoked when start parse xml element node use sax parser.
+        @Throws(SAXException::class)
+        override fun startElement(uri: String, localName: String, qName: String, attributes: Attributes) {
+
+            currentElement = true
+            currentValue = ""
+            currentInfo = ""
+
+            when (localName) {
+                TAG_JOB -> {
+                    job = Job()
+
+                    //Get required Attributes for Job TAG
+                    jobXml.job_Attrs?.let {
+                        jobAttrs = readAttributes(attributes, it)
                     }
-                    TAG_INFO_UNIT -> {
-                        infoUnit.add(readInfoUnit(parser))
-                    }
-                    TAG_INFO -> {
-                        info = Info(infoUnit)
-                    }
-                    TAG_TASK_LIST -> {
-                        taskListItem = readTaskList(parser)
+                }
+                TAG_INFO_UNIT -> {
 
-                        taskListItem?.let {
-                            taskList.add(it)
-                        }
-                    }
-                    TAG_TASK -> {
-                        taskItem = readTask(parser)
-                        taskItem?.let {
-                            tasks.add(it)
-                            taskList.last().tasks = tasks
+                    if (attributes.getValue(ATTR_TYPE) == INFO_UNIT_SUBSCRIPTION_SUMMARY) {
+
+                        currentInfo = INFO_UNIT_SUBSCRIPTION_SUMMARY
+
+                        //Get required Attributes for Info TAG
+                        jobXml.info_info_unit_Attrs?.let {
+                            jobInfoSummary = arrayListOf()
                         }
                     }
                 }
-            }
-            XmlPullParser.END_TAG -> {
+                TAG_INFO -> {
+                    info = Info(infoUnit)
+                }
+                TAG_TASK_LIST -> {
 
-                info?.info_unit = infoUnit
+                    if (singleTaskListCollection == null) {
+                        singleTaskListCollection = arrayListOf()
+                    }
 
-                job = Job()
-                job.info = info
-                job.taskList = taskList
-                job.jobAttributes = jobAttrs
-            }
-            XmlPullParser.END_DOCUMENT -> {
+                    var taskListAttrs = arrayListOf<String>()
 
+                    //Get required Attributes for TaskList1 TAG
+                    jobXml.main_task_list_Attrs1?.let {
+                        taskListAttrs = readAttributes(attributes, it)
+                    }
+
+                    val singleTaskList = TaskList(taskListAttrs)
+                    singleTaskListCollection?.add(singleTaskList)
+                }
+                TAG_TASK -> {
+
+                    var taskAttrs = arrayListOf<String>()
+
+                    //Get required Attributes for Task TAG
+                    jobXml.task_item_Attrs?.let {
+                        taskAttrs = readAttributes(attributes, it)
+                    }
+
+                    val taskItem = Task(taskAttrs)
+
+                    if (singleTaskListCollection?.isNotEmpty()!!) {
+                        if (singleTaskListCollection?.last()?.tasks == null) {
+                            singleTaskListCollection?.last()?.tasks = arrayListOf()
+                        }
+                    }
+
+                    taskItem.let {
+                        singleTaskListCollection?.last()?.tasks?.add(it)
+                    }
+                }
             }
         }
 
-        eventType = parser.next()
-    }
+        // When sax parse xml element node finished, invoke this method.
+        @Throws(SAXException::class)
+        override fun endElement(uri: String, localName: String, qName: String) {
+            currentElement = false
 
-    return job!!
-}
+            when (localName) {
+                TAG_JOB -> {
+                    job?.infoSummary = jobInfoSummary
+                    job?.taskList = parentTaskList
+                    job?.jobAttributes = jobAttrs
+                }
+                TAG_INFO_UNIT -> {
 
-@Throws(IOException::class, XmlPullParserException::class)
-private fun readJobAttributes(parser: XmlPullParser, listOfAttributes: ArrayList<String>): ArrayList<String> {
+                    if (currentInfo == INFO_UNIT_SUBSCRIPTION_SUMMARY) {
+                        jobInfoSummary?.add(currentValue)
+                    }
+                }
+                TAG_INFO -> {
+                    info?.info_unit = infoUnit
+                }
+                TAG_TASK_LIST -> {
+                    if (singleTaskListCollection?.isNotEmpty()!!) {
+                        parentTaskList.add(singleTaskListCollection?.last()!!)
+                        singleTaskListCollection?.clear()
+                    }
+                }
+                TAG_TASK -> {
 
-    val arrayList = arrayListOf<String>()
-    val tag = parser.name
-
-    if (tag == TAG_JOB) {
-
-        for (attr in listOfAttributes) {
-            val value = parser.getAttributeValue("", attr)
-            if (value != null) {
-                arrayList.add(value)
+                }
             }
         }
 
-        parser.nextTag()
-    }
-
-    return arrayList
-}
-
-
-@Throws(XmlPullParserException::class, IOException::class)
-private fun readInfo(parser: XmlPullParser): Info {
-
-    var infoUnit: InfoUnit? = null
-    val type: String? = null
-
-    if (parser.name == TAG_INFO) {
-        infoUnit = type?.let { InfoUnit(type) }!!
-    }
-
-    return infoUnit?.let { Info(listOf(infoUnit)) }!!
-}
-
-@Throws(XmlPullParserException::class, IOException::class)
-private fun readInfoUnit(parser: XmlPullParser): InfoUnit {
-
-    var type: String? = null
-
-    if (parser.name == TAG_INFO_UNIT) {
-        type = readValues(parser)
-    }
-
-    return type?.let { InfoUnit(type) }!!
-}
-
-@Throws(XmlPullParserException::class, IOException::class)
-private fun readTaskList(parser: XmlPullParser): TaskList? {
-
-    val taskList = TaskList()
-    var taskListId: String? = null
-    var orderNo: String? = null
-
-    if (parser.name == TAG_TASK_LIST) {
-
-        taskListId = parser.getAttributeValue("", ATTR_TASK_LIST_ID)
-        orderNo = parser.getAttributeValue("", ATTR_ORDER_NO)
-
-        taskListId?.let {
-            taskList.task_list_id = it
-        }
-
-        orderNo?.let {
-            taskList.order_no = it
+        // This method is invoked when sax parser parse xml node text.
+        @Throws(SAXException::class)
+        override fun characters(ch: CharArray, start: Int, length: Int) {
+            if (currentElement) {
+                currentValue = String(ch, start, length)
+                currentElement = false
+            }
         }
 
     }
-
-    return taskList
-}
-
-@Throws(XmlPullParserException::class, IOException::class)
-private fun readTask(parser: XmlPullParser): Task? {
-
-    var taskId: String? = null
-    var orderLineNo: String? = null
-    var sortOrder: String? = null
-
-    if (parser.name == TAG_TASK) {
-        taskId = parser.getAttributeValue("", ATTR_TASK_ID)
-        orderLineNo = parser.getAttributeValue("", ATTR_ORDER_LINE_NO)
-        sortOrder = parser.getAttributeValue("", ATTR_SORT_ORDER)
-    }
-
-    return Task(taskId, orderLineNo, sortOrder)
 }

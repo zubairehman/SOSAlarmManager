@@ -1,9 +1,7 @@
 package com.cubivue.base.util.parser
 
 import android.content.Context
-import org.xmlpull.v1.XmlPullParser
-import org.xmlpull.v1.XmlPullParserException
-import java.io.IOException
+import org.xml.sax.Attributes
 import java.io.InputStream
 
 
@@ -19,15 +17,13 @@ fun readAssetsXML(fileName: String, context: Context): InputStream? {
     return am.open("xml/$fileName")
 }
 
-/*
- * This will extract values from TAGs
- */
-@Throws(IOException::class, XmlPullParserException::class)
-fun readValues(parser: XmlPullParser): String {
-    var result = ""
-    if (parser.next() == XmlPullParser.TEXT) {
-        result = parser.text
-        parser.nextTag()
+fun readAttributes(attributes: Attributes, listOfAttributes: ArrayList<String>): ArrayList<String> {
+
+    val arrayList = arrayListOf<String>()
+
+    for (attr in listOfAttributes) {
+        arrayList.add(attributes.getValue(attr))
     }
-    return result
+
+    return arrayList
 }

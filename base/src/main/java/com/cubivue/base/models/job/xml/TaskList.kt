@@ -1,8 +1,5 @@
 package com.cubivue.base.models.job.xml
 
-class TaskList() {
-
-    var task_list_id: String? = null
-    var order_no: String? = null
+data class TaskList(var attributes: ArrayList<String>) {
     var tasks: ArrayList<Task>? = null
 }

@@ -19,7 +19,7 @@ const val ATTR_TYPE = "type"
 //Attributes TaskList
 const val ATTR_TASK_LIST_ID = "task-list-id"
 const val ATTR_ORDER_NO = "order-no"
-const val ATTR_TASK_ID = "tasks-id"
+const val ATTR_TASK_ID = "task-id"
 const val ATTR_ORDER_LINE_NO = "order-line-no"
 const val ATTR_SORT_ORDER = "sort-order"
 
