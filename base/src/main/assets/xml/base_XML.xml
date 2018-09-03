@@ -1,0 +1,34 @@
+<job attrs="list_of_attributes_for_job">
+    <info>
+        <info-unit type="name_of_info_unit">Text</info-unit>
+    </info>
+    <main>
+        <task-list attrs="list_of_attributes_for_task_list">
+            <task-list task-list-id="1060-a-0001-0001">
+                <info>
+                    <info-unit type="name_of_info_unit">TEXT</info-unit>
+                </info>
+                <task-list attrs="list_of_attributes_for_task_list">
+                    <task-list attrs="list_of_attributes_for_task_list">
+                        <task attrs="list_of_attributes_for_task">
+                            <address attrs="list_of_attributes_for_address">
+                                <tags_address>Value</tags_address>
+                                <tags_address>Value</tags_address>
+                            </address>
+                            <item attrs="list_of_attributes_for_item">
+                                <tags_item>Value</tags_item>
+                                <tags_item>Value</tags_item>
+                                <tags_item>Value</tags_item>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="name_of_info_unit">TEXT</info-unit>
+                                </info>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+    </main>
+</job>

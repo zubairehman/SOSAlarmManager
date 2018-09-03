@@ -6,26 +6,17 @@ import org.xmlpull.v1.XmlPullParserException
 import java.io.IOException
 import java.io.InputStream
 
+
+//XML Types
+const val XML_TYPE_JOB = "1"
+const val XML_TYPE_PROBLEM_CODES = "2"
+
 /*
  * Read XML file as InputStream.
  */
 fun readAssetsXML(fileName: String, context: Context): InputStream? {
     val am = context.assets
     return am.open("xml/$fileName")
-}
-
-/*
- * Skip tags that not need parsing.
- */
-@Throws(XmlPullParserException::class, IOException::class)
-fun skip(parser: XmlPullParser) {
-    var depth = 1
-    while (depth != 0) {
-        when (parser.next()) {
-            XmlPullParser.END_TAG -> depth--
-            XmlPullParser.START_TAG -> depth++
-        }
-    }
 }
 
 /*

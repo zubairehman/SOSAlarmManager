@@ -11,8 +11,18 @@ import java.io.InputStream
 
 class XMLParser {
 
-    fun parseJobXML(name: String, context: Context): Job? {
-        val ins = readAssetsXML(name, context)
+    //Parameters for Parser
+    lateinit var jobXml: JobXMLStructure
+
+    fun parse(xmlType: String, path: String, context: Context) {
+
+        when (xmlType) {
+            XML_TYPE_JOB -> parseJobXML(path, context)
+        }
+    }
+
+    private fun parseJobXML(path: String, context: Context): Job? {
+        val ins = readAssetsXML(path, context)
         return parse(ins)
     }
 
@@ -22,7 +32,7 @@ class XMLParser {
             val parser = Xml.newPullParser()
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false)
             parser.setInput(inputStream, null)
-            return readJobXML(parser)
+            return readJobXML(parser, jobXml)
         } finally {
             inputStream?.close()
         }

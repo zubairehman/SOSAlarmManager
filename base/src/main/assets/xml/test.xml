@@ -24,6 +24,152 @@
                                 </info>
                             </action>
                         </task>
+                        <task task-id="W0310550-20000" order-line-no="20000" sort-order="97">
+                            <address>
+                                <location>12050</location>
+                            </address>
+                            <item quantity="1">
+                                <item-id>504658</item-id>
+                                <item-name>WILDO Camp-A-Box Basic Olive</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="barcode">2900000196834;7330883302643</info-unit>
+                                </info>
+                            </action>
+                        </task>
+                        <task task-id="W0310550-10000" order-line-no="10000" sort-order="130">
+                            <address>
+                                <location>14020</location>
+                            </address>
+                            <item quantity="1">
+                                <item-id>505853</item-id>
+                                <item-name>WILDO Camp-A-Box Basic Lime</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="barcode">7330883326113</info-unit>
+                                </info>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="1060-a-0002" order-no="W0310538">
+            <task-list task-list-id="1060-a-0002-0001">
+                <info>
+                    <info-unit type="product-summary">POP UP Grill~1;Knob og Stik~1;Knobbånd 125cm~1;</info-unit>
+                </info>
+                <task-list task-list-id="1060-a-0002-0001-0001">
+                    <task-list task-list-id="1060-a-0002-0001-0001-0001">
+                        <task task-id="W0310538-10000" order-line-no="10000" sort-order="100">
+                            <address>
+                                <location>13050</location>
+                            </address>
+                            <item quantity="1">
+                                <item-id>504097</item-id>
+                                <item-name>POP UP Grill</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="barcode">2900000173286;7393173199767</info-unit>
+                                </info>
+                            </action>
+                        </task>
+                        <task task-id="W0310538-20000" order-line-no="20000" sort-order="486">
+                            <address>
+                                <location>44062</location>
+                            </address>
+                            <item quantity="1">
+                                <item-id>310232</item-id>
+                                <item-name>Knob og Stik</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="barcode">2920000000481;310232;9788714285999</info-unit>
+                                </info>
+                            </action>
+                        </task>
+                        <task task-id="W0310538-30000" order-line-no="30000" sort-order="632">
+                            <address>
+                                <location>39101</location>
+                            </address>
+                            <item quantity="1">
+                                <item-id>311360</item-id>
+                                <item-name>Knobbånd 125cm</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="variant-code">10003</info-unit>
+                                    <info-unit type="variant-description">Knobbånd 125cm</info-unit>
+                                </info>
+                            </action>
+                            <action>
+                                <info>
+                                    <info-unit type="barcode">2999000000135;311360075000</info-unit>
+                                </info>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="1060-a-0003" order-no="27925">
+            <task-list task-list-id="1060-a-0003-0001">
+                <info>
+                    <info-unit type="product-summary">ASIVIK Trekker 70~50;ASIVIK Evamat 9½mmLiggeunderla~40;</info-unit>
+                </info>
+                <task-list task-list-id="1060-a-0003-0001-0001">
+                    <task-list task-list-id="1060-a-0003-0001-0001-0001">
+                        <task task-id="27925-10000" order-line-no="10000" sort-order="148">
+                            <address>
+                                <location>14080</location>
+                            </address>
+                            <item quantity="45">
+                                <item-id>505609</item-id>
+                                <item-name>ASIVIK Trekker 70</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="barcode">5707465006244</info-unit>
+                                </info>
+                            </action>
+                        </task>
+                        <task task-id="27925-15000" order-line-no="15000" sort-order="148">
+                            <address>
+                                <location>14080</location>
+                            </address>
+                            <item quantity="5">
+                                <item-id>505609</item-id>
+                                <item-name>ASIVIK Trekker 70</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="barcode">5707465006244</info-unit>
+                                </info>
+                            </action>
+                        </task>
+                        <task task-id="27925-20000" order-line-no="20000" sort-order="154">
+                            <address>
+                                <location>13100</location>
+                            </address>
+                            <item quantity="40">
+                                <item-id>330430</item-id>
+                                <item-name>ASIVIK Evamat 9½mmLiggeunderla</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="variant-code">10000</info-unit>
+                                    <info-unit type="variant-description">ASIVIK Evamat 9½mmLiggeunderla</info-unit>
+                                </info>
+                            </action>
+                            <action>
+                                <info>
+                                    <info-unit type="barcode">2999000000388;30+002152;330430065000;5707465004325</info-unit>
+                                </info>
+                            </action>
+                        </task>
                     </task-list>
                 </task-list>
             </task-list>
