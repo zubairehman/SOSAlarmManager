@@ -1,8 +1,8 @@
 package com.cubivue.base.models.job.xml
 
-class Job() {
+class BaseJob() {
 
     var infoSummary: ArrayList<String>? = null
-    var taskList: ArrayList<TaskList>? = null
+    var taskList: ArrayList<BaseTaskList>? = null
     var jobAttributes: ArrayList<String>? = null
 }
