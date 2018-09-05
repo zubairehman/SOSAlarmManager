@@ -14,6 +14,10 @@ open class Job() : RealmObject() {
     var productionDate: String = ""
 
     var taskList: RealmList<Task>? = null
+    var productsList: RealmList<Products>? = null
+    var addressedProductsList: RealmList<AddressedProducts>? = null
+    var labelsList: RealmList<Labels>? = null
+    var keysList: RealmList<Keys>? = null
 
     constructor(id: String) : this() {
         this.jobId = id

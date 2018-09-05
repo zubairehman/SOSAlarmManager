@@ -1,7 +1,6 @@
 package com.cubivue.app.models.xml
 
-import com.cubivue.app.models.job.Job
-import com.cubivue.app.models.job.Task
+import com.cubivue.app.models.job.*
 import com.cubivue.base.models.job.xml.BaseJob
 import io.realm.RealmList
 
@@ -18,7 +17,7 @@ class JobXMLMapper {
 
             job.taskList = RealmList()
 
-            it.taskList?.forEach {
+            baseJob.taskList?.forEach {
 
                 val parentTask = Task()
                 parentTask.id = it.attributes.get(0) //Set TaskListId
@@ -34,8 +33,53 @@ class JobXMLMapper {
                     job.taskList?.add(task) //Add to Job Task's
                 }
             }
+
+            baseJob.infoSummary?.forEach {
+
+                when (it.first) {
+                    INFO_UNIT_SUBSCRIPTION_SUMMARY -> {
+                        job.productsList = RealmList()
+
+
+                        val rawList = splitText(it.second, ";")
+
+                        for (value in rawList) {
+                            val sub = splitText(value, ",")
+                            if (sub.isNotEmpty() && sub.first().isNotEmpty() && sub.last().isNotEmpty())
+                                job.productsList?.add(Products(sub.first(), sub.last().toInt()))
+                        }
+                    }
+
+                    INFO_UNIT_PRODUCT_SUMMARY -> {
+                        job.addressedProductsList = RealmList()
+
+                        val rawList = splitText(it.second, ";")
+
+                        for (value in rawList) {
+                            val sub = splitText(value, ",")
+                            if (sub.isNotEmpty() && sub.first().isNotEmpty() && sub.last().isNotEmpty())
+                                job.addressedProductsList?.add(AddressedProducts(sub.first(), sub.last().toInt()))
+                        }
+                    }
+
+                    INFO_UNIT_LABEL_SUMMARY -> {
+                        job.labelsList = RealmList()
+                        job.labelsList?.add(Labels(it.second))
+                    }
+
+                    INFO_UNIT_KEY_SUMMARY -> {
+                        job.keysList = RealmList()
+                        job.keysList?.add(Keys(it.second))
+
+                    }
+                }
+            }
         }
 
         return job
+    }
+
+    private fun splitText(text: String, splitBy: String): List<String> {
+        return text.split(splitBy).map { it.trim() }
     }
 }

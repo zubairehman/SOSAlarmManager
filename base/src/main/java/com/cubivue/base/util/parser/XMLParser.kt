@@ -15,12 +15,16 @@ import javax.xml.parsers.SAXParserFactory
 class XMLParser {
 
     //Parameters for Parser
-    lateinit var jobXml: JobXMLStructure
+    var xml: JobXMLStructure? = null
 
     fun <T> parse(xmlType: String, path: String, context: Context): T {
 
-        when (xmlType) {
-            XML_TYPE_JOB -> return parseJobXML(path, context) as T
+        if (xml != null) {
+
+            when (xmlType) {
+                XML_TYPE_JOB -> return parseJobXML(path, context) as T
+            }
+
         }
 
         return null!!
@@ -47,7 +51,7 @@ class XMLParser {
 
                 //Info
                 var info: BaseInfo? = null
-                var jobInfoSummary: ArrayList<String>? = null
+                var jobInfoSummary: ArrayList<Pair<String, String>>? = arrayListOf()
 
                 //Main
                 val parentTaskList = arrayListOf<BaseTaskList>()
@@ -67,27 +71,25 @@ class XMLParser {
 
                     currentElement = true
                     currentValue = ""
-                    currentInfo = ""
 
                     when (localName) {
                         TAG_JOB -> {
                             job = BaseJob()
 
                             //Get required Attributes for Job TAG
-                            jobXml.job_Attrs?.let {
+                            xml?.job_Attrs?.let {
                                 jobAttrs = readAttributes(attributes, it)
                             }
                         }
                         TAG_INFO_UNIT -> {
 
-                            if (attributes.getValue(ATTR_TYPE) == INFO_UNIT_SUBSCRIPTION_SUMMARY) {
+                            val parsedType = attributes.getValue(ATTR_TYPE)
 
-                                currentInfo = INFO_UNIT_SUBSCRIPTION_SUMMARY
+                            //Only look for Job Summary Info types
+                            if (xml?.info_info_unit_Attrs_Types!!.contains(parsedType) && jobInfoSummary?.size!! <= xml?.max_summary_info_tags!!) {
 
-                                //Get required Attributes for Info TAG
-                                jobXml.info_info_unit_Attrs?.let {
-                                    jobInfoSummary = arrayListOf()
-                                }
+                                //Set current attribute name
+                                currentInfo = parsedType
                             }
                         }
                         TAG_INFO -> {
@@ -102,7 +104,7 @@ class XMLParser {
                             var taskListAttrs = arrayListOf<String>()
 
                             //Get required Attributes for TaskList1 TAG
-                            jobXml.main_task_list_Attrs1?.let {
+                            xml?.main_task_list_Attrs1?.let {
                                 taskListAttrs = readAttributes(attributes, it)
                             }
 
@@ -114,7 +116,7 @@ class XMLParser {
                             var taskAttrs = arrayListOf<String>()
 
                             //Get required Attributes for Task TAG
-                            jobXml.task_item_Attrs?.let {
+                            xml?.task_item_Attrs?.let {
                                 taskAttrs = readAttributes(attributes, it)
                             }
 
@@ -146,8 +148,10 @@ class XMLParser {
                         }
                         TAG_INFO_UNIT -> {
 
-                            if (currentInfo == INFO_UNIT_SUBSCRIPTION_SUMMARY) {
-                                jobInfoSummary?.add(currentValue)
+                            //Add info only for selected type
+                            if (xml?.info_info_unit_Attrs_Types!!.contains(currentInfo) && jobInfoSummary?.size!! <= xml?.max_summary_info_tags!!) {
+                                jobInfoSummary?.add(Pair(currentInfo, currentValue))
+                                currentInfo = ""
                             }
                         }
                         TAG_INFO -> {
