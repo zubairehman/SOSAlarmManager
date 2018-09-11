@@ -1,4 +1,4 @@
-package com.cubivue.base.modules.drawer.fragments
+package com.cubivue.base.ui.drawer.fragments
 
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
@@ -10,11 +10,11 @@ import com.cubivue.base.R
 import com.cubivue.base.models.menu.MenuDto
 import com.cubivue.base.models.menuAdapter.MenuAdapterBuilder
 import com.cubivue.base.models.menuAdapter.MenuAdapterDto
-import com.cubivue.base.modules.baseclasses.fragment.BaseFragment
-import com.cubivue.base.modules.drawer.adapters.MenuAdapter
-import com.cubivue.base.modules.drawer.interfaces.IOnClick
-import com.cubivue.base.modules.drawer.interfaces.IOnMenuCreated
-import com.cubivue.base.modules.drawer.interfaces.IOnMenuItemClicked
+import com.cubivue.base.ui.baseclasses.fragment.BaseFragment
+import com.cubivue.base.ui.drawer.adapters.MenuAdapter
+import com.cubivue.base.ui.drawer.interfaces.IOnClick
+import com.cubivue.base.ui.drawer.interfaces.IOnMenuCreated
+import com.cubivue.base.ui.drawer.interfaces.IOnMenuItemClicked
 import kotlinx.android.synthetic.main.fragment_abstract_drawer.*
 import java.util.*
 
@@ -62,7 +62,7 @@ abstract class AbstractDrawerFragment : BaseFragment(), IOnMenuItemClicked {
         }
     }
 
-    override fun getExtras(extras: ArrayList<Any>) {
+    override fun getExtras(extras: ArrayList<*>) {
 
     }
 

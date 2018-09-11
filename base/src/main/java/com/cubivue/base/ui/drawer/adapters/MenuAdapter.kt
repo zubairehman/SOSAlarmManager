@@ -1,4 +1,4 @@
-package com.cubivue.base.modules.drawer.adapters
+package com.cubivue.base.ui.drawer.adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -7,9 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.cubivue.base.R
-import com.cubivue.base.modules.drawer.interfaces.IOnMenuItemClicked
+import com.cubivue.base.ui.drawer.interfaces.IOnMenuItemClicked
 import com.cubivue.base.models.menu.MenuDto
-import com.cubivue.base.modules.drawer.fragments.AbstractDrawerFragment
+import com.cubivue.base.ui.drawer.fragments.AbstractDrawerFragment
 import kotlinx.android.synthetic.main.item_menu.view.*
 
 class MenuAdapter(val mContext: Context, val baseDrawerFragment: AbstractDrawerFragment, val layout: Int) : RecyclerView.Adapter<ViewHolder>() {

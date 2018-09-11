@@ -1,4 +1,4 @@
-package com.cubivue.base.modules.baseclasses;
+package com.cubivue.base.ui.baseclasses;
 
 import android.graphics.Typeface;
 import android.os.Build;
@@ -13,9 +13,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.cubivue.base.R;
-import com.cubivue.base.modules.baseclasses.activity.BaseDrawerActivity;
-import com.cubivue.base.modules.baseclasses.activity.BaseToolbarActivity;
-import com.cubivue.base.modules.baseclasses.fragment.FragmentUtil;
+import com.cubivue.base.ui.baseclasses.activity.BaseDrawerActivity;
+import com.cubivue.base.ui.baseclasses.activity.BaseToolbarActivity;
+import com.cubivue.base.ui.baseclasses.fragment.FragmentUtil;
 import com.cubivue.base.util.stringcolor.ColorUtil;
 
 

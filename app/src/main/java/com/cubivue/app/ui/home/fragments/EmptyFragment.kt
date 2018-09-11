@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.cubivue.app.R
-import com.cubivue.base.modules.baseclasses.fragment.BaseToolbarFragment
+import com.cubivue.base.ui.baseclasses.fragment.BaseToolbarFragment
 import java.util.*
 
 class EmptyFragment : BaseToolbarFragment() {
@@ -14,7 +14,7 @@ class EmptyFragment : BaseToolbarFragment() {
         return inflater.inflate(R.layout.fragment_empty, container, false)
     }
 
-    override fun getExtras(extras: ArrayList<Any>) {
+    override fun getExtras(extras: ArrayList<*>) {
 
     }
 

@@ -1,4 +1,4 @@
-package com.cubivue.base.modules.baseclasses.fragment;
+package com.cubivue.base.ui.baseclasses.fragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

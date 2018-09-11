@@ -1,9 +1,10 @@
-package com.cubivue.base.baseUi
+package com.cubivue.base.ui.baseclasses.fragment
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.arch.lifecycle.ViewModelProvider
 import android.content.Context
+import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.View
 import android.widget.ProgressBar
@@ -13,10 +14,13 @@ import com.michaelflisar.rxbus2.rx.RxDisposableManager
 import dagger.android.support.AndroidSupportInjection
 import io.reactivex.processors.BehaviorProcessor
 import org.reactivestreams.Publisher
+import java.util.*
 import javax.inject.Inject
 
 
 abstract class BaseFragment : Fragment(), IRxBusQueue{
+
+    private var isActive: Boolean = false
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -30,13 +34,24 @@ abstract class BaseFragment : Fragment(), IRxBusQueue{
 
     private val TAG = "BaseFragment"
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val extras = arguments
+        if (extras != null) {
+            getExtras(extras.getSerializable("extras") as ArrayList<*>)
+        }
+    }
+
     override fun onResume() {
         super.onResume()
+        isActive = true
         mResumedProcessor.onNext(true)
     }
 
     override fun onPause() {
         mResumedProcessor.onNext(false)
+        isActive = false
         super.onPause()
     }
 
@@ -44,6 +59,12 @@ abstract class BaseFragment : Fragment(), IRxBusQueue{
         RxDisposableManager.unsubscribe(this)
         super.onDestroy()
     }
+
+    // ----------------
+    // Abstract Methods
+    // ----------------
+
+    abstract fun getExtras(extras: ArrayList<*>)
 
     // --------------
     // Interface RxBus
@@ -86,4 +107,18 @@ abstract class BaseFragment : Fragment(), IRxBusQueue{
                     }
                 })
     }
+
+    fun isThisFragmentActive(): Boolean {
+        return isActive
+    }
+
+    fun addExtras(extras: ArrayList<Any>?): BaseFragment {
+        if (extras != null) {
+            val args = Bundle()
+            args.putSerializable("extras", extras)
+            this.arguments = args
+        }
+        return this
+    }
+
 }

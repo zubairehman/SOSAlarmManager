@@ -1,4 +1,4 @@
-package com.cubivue.base.modules.drawer.interfaces;
+package com.cubivue.base.ui.drawer.interfaces;
 
 import com.cubivue.base.models.menu.MenuDto;
 

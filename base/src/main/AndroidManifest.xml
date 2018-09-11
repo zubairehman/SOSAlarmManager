@@ -15,7 +15,6 @@
         <activity
             android:name=".util.preference.preferenceActivity.activity.BaseSettingsActivity"
             android:label="@string/activity_preference_title" />
-        <activity android:name=".util.menu.activities.BaseMenuActivity" />
     </application>
 
 </manifest>

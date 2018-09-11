@@ -1,10 +1,10 @@
-package com.cubivue.base.modules.baseclasses.activity;
+package com.cubivue.base.ui.baseclasses.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import com.cubivue.base.R;
-import com.cubivue.base.modules.baseclasses.fragment.FragmentUtil;
+import com.cubivue.base.ui.baseclasses.fragment.FragmentUtil;
 
 public abstract class BaseToolbarActivity extends BaseActivity {
 

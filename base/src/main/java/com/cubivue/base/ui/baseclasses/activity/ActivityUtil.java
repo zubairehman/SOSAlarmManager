@@ -1,4 +1,4 @@
-package com.cubivue.base.modules.baseclasses.activity;
+package com.cubivue.base.ui.baseclasses.activity;
 
 import android.app.Activity;
 import android.content.Intent;

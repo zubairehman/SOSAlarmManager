@@ -1,4 +1,4 @@
-package com.cubivue.base.modules.baseclasses.fragment;
+package com.cubivue.base.ui.baseclasses.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,8 +7,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.cubivue.base.modules.baseclasses.ToolbarUtil;
-import com.cubivue.base.modules.baseclasses.activity.BaseToolbarActivity;
+import com.cubivue.base.ui.baseclasses.ToolbarUtil;
+import com.cubivue.base.ui.baseclasses.activity.BaseToolbarActivity;
 
 public abstract class BaseToolbarFragment extends BaseFragment {
 

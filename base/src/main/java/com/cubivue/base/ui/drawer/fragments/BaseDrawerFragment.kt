@@ -1,9 +1,9 @@
-package com.cubivue.base.modules.drawer.fragments
+package com.cubivue.base.ui.drawer.fragments
 
 import com.cubivue.base.R
 import com.cubivue.base.models.menu.MenuBuilder
 import com.cubivue.base.models.menu.MenuDto
-import com.cubivue.base.modules.drawer.interfaces.IOnMenuCreated
+import com.cubivue.base.ui.drawer.interfaces.IOnMenuCreated
 
 
 open class BaseDrawerFragment : AbstractDrawerFragment(), IOnMenuCreated {

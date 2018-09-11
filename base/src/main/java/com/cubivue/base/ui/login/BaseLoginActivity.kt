@@ -1,7 +1,7 @@
-package com.cubivue.base.modules.login
+package com.cubivue.base.ui.login
 
 import android.support.v4.app.Fragment
-import com.cubivue.base.modules.baseclasses.activity.BaseActivity
+import com.cubivue.base.ui.baseclasses.activity.BaseActivity
 import java.util.*
 
 
@@ -10,7 +10,7 @@ abstract class BaseLoginActivity : BaseActivity() {
         return getLoginFragment()
     }
 
-    override fun getExtras(extras: ArrayList<Any>?) {
+    override fun getExtras(extras: ArrayList<*>) {
     }
 
     //Abstract Methods:-----------------------------------------------------------------------------

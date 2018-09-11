@@ -1,4 +1,4 @@
-package com.cubivue.base.baseUi
+package com.cubivue.base.ui.baseclasses.activity
 
 import android.arch.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import com.cubivue.base.R
+import com.cubivue.base.ui.baseclasses.fragment.FragmentUtil
 import com.cubivue.base.util.permissions.PermissionManager
 import com.cubivue.base.util.permissions.PermissionUtils
 import com.cubivue.base.util.permissions.enums.PermissionEnum
@@ -40,6 +41,14 @@ abstract class BaseActivity : AppCompatActivity(), IRxBusQueue, HasSupportFragme
     override fun onCreate(savedInstanceState: Bundle?) {
         //AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.base_activity)
+        FragmentUtil(this).replaceBaseFragment(getBaseFragment())
+
+        //getting extras
+        val extras = intent.extras
+        if (extras != null) {
+            getExtras(extras.getSerializable("extras") as ArrayList<*>)
+        }
     }
 
     override fun onResume() {
@@ -56,6 +65,14 @@ abstract class BaseActivity : AppCompatActivity(), IRxBusQueue, HasSupportFragme
         RxDisposableManager.unsubscribe(this)
         super.onDestroy()
     }
+
+    // ----------------
+    // Abstract Methods
+    // ----------------
+
+    abstract fun getExtras(extras: ArrayList<*>)
+
+    abstract fun getBaseFragment(): Fragment
 
     // --------------
     // Interface RxBus

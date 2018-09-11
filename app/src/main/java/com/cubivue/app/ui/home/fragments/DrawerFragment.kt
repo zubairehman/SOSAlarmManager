@@ -6,10 +6,10 @@ import com.cubivue.base.models.menu.MenuBuilder
 import com.cubivue.base.models.menu.MenuDto
 import com.cubivue.base.models.menuAdapter.MenuAdapterBuilder
 import com.cubivue.base.models.menuAdapter.MenuAdapterDto
-import com.cubivue.base.modules.baseclasses.activity.BaseDrawerActivity
-import com.cubivue.base.modules.drawer.fragments.BaseDrawerFragment
-import com.cubivue.base.modules.drawer.interfaces.IOnClick
-import com.cubivue.base.modules.drawer.interfaces.IOnMenuCreated
+import com.cubivue.base.ui.baseclasses.activity.BaseDrawerActivity
+import com.cubivue.base.ui.drawer.fragments.BaseDrawerFragment
+import com.cubivue.base.ui.drawer.interfaces.IOnClick
+import com.cubivue.base.ui.drawer.interfaces.IOnMenuCreated
 
 
 class DrawerFragment : BaseDrawerFragment(), IOnMenuCreated, IOnClick {

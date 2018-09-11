@@ -1,8 +1,8 @@
 package com.cubivue.app.di
 
 import com.cubivue.app.ui.login.LoginActivity
-import com.cubivue.base.baseUi.BaseActivity
 import com.cubivue.base.di.ActivityScope
+import com.cubivue.base.ui.baseclasses.activity.BaseActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
