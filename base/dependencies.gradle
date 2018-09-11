@@ -63,13 +63,13 @@ ext {
     //Crash Reporting
     crashlyticsVersion = '2.9.4@aar'
 
-    //Material Dialog
-    materialDialogVersion = 'core:2.0.0-alpha05'
-
     //Microsoft Azure
     azureMobileVersion = '3.1.0'
     azureNotificationsVersion = '1.0.1@aar'
     azureSDKVersion = '0.4@aar'
+
+    //Realm
+    realmEncryptionHelperVersion = '1.0.2'
 
     //Test
     junitVersion = '4.12'
@@ -187,8 +187,8 @@ ext {
     //Crashlytics
     crashlytics = "com.crashlytics.sdk.android:crashlytics:${crashlyticsVersion}"
 
-    //Material Dialogs
-    materialDialog =  "com.afollestad.material-dialogs:${materialDialogVersion}"
+    //RealmEncryption
+    realmEncryptionHelper = "com.github.tntkhang:realm-encryption-helper:${realmEncryptionHelperVersion}"
 
     //Tests
     testDependencies = [

@@ -7,6 +7,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 
 @RunWith(RobolectricTestRunner::class)
@@ -19,6 +20,8 @@ public class LoginActivityTest {
     @Throws(Exception::class)
     fun setUp() {
 
+        (RuntimeEnvironment.application as TestApp).createAppComponent()?.inject(this)
+
         activity = Robolectric.buildActivity(LoginActivity::class.java)
                 .create()
                 .visible()
@@ -28,8 +31,7 @@ public class LoginActivityTest {
 
     @Test
     @Throws(Exception::class)
-    fun shouldNotBeNull() {
+    fun activityIsNotNull() {
         assertNotNull(activity)
     }
-
 }

@@ -1,5 +1,6 @@
 package com.cubivue.base.di
 
+import com.cubivue.base.data.network.BaseRestService
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -33,11 +34,9 @@ class NetworkModule() {
                 .build()
     }
 
-    /*@Singleton
     @Provides
-    fun provideApiService(client: OkHttpClient): RestService {
-        return provideRetrofit(client).create(RestService::class.java)
-    }*/
+    @Singleton
+    fun providesBaseRestService(retrofit: Retrofit): BaseRestService = retrofit.create(BaseRestService::class.java)
 
     @Singleton
     @Provides

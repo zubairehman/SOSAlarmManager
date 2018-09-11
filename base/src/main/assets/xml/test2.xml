@@ -1,0 +1,2748 @@
+<job job-id="275020" job-name="30010" date="04-09-2018">
+    <address>
+        <address-id>349</address-id>
+    </address>
+    <info>
+        <info-unit type="subscription-summary">POL,33;BERL,10;INF,2;FLEAS,2;KRD,1;ARB,1;ABOBO,3;EB,2;BT,1;JP,2;13,1;SANBL,1;</info-unit>
+        <info-unit type="product-summary">apA,19;</info-unit>
+        <info-unit type="label-summary">14</info-unit>
+        <info-unit type="key-summary">1</info-unit>
+    </info>
+    <messages>
+        <message>
+            <TEKST>80811467 fra 23:00 to 07:30 / 08:30&amp;lt;br/&amp;gt;38115368 i alle andre tidsrum/all other times&amp;lt;br/&amp;gt;VIGTIG - IMPORTANT - WAZNE&amp;lt;br/&amp;gt;ABOBO SMS : 41 93 08 80</TEKST>
+            <AFSENDER>DI</AFSENDER>
+            <MODTAGER>ALLE</MODTAGER>
+        </message>
+    </messages>
+    <cancellations>
+        <task-list task-list-id="275020-a-0001">
+            <address>
+                <street>Borrebyvej</street>
+            </address>
+            <task-list task-list-id="275020-a-0001-0001">
+                <address>
+                    <number>18</number>
+                    <litra />
+                </address>
+                <task-list task-list-id="275020-a-0001-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-a-0001-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1025210044300</recipient-id>
+                            <recipient-name>JØRGEN KIBSHEDE</recipient-name>
+                        </recipient>
+                        <task>
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+    </cancellations>
+    <complaints>
+        <task-list task-list-id="275020-b-0001">
+            <address>
+                <street>Risbyholmvej</street>
+            </address>
+            <task-list task-list-id="275020-b-0001-0001">
+                <address>
+                    <number>13</number>
+                    <litra />
+                </address>
+                <task-list task-list-id="275020-b-0001-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-b-0001-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1025932948200</recipient-id>
+                            <recipient-name>MICHAEL WODICKH</recipient-name>
+                        </recipient>
+                        <task>
+                            <info>
+                                <info-unit type="complaint-text">POLITIKEN UDEBLEVET</info-unit>
+                                <info-unit type="complaint-date">03-09-2018</info-unit>
+                            </info>
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-b-0002">
+            <address>
+                <street>Brønshøjvej</street>
+            </address>
+            <task-list task-list-id="275020-b-0002-0001">
+                <address>
+                    <number>76</number>
+                    <litra />
+                </address>
+                <task-list task-list-id="275020-b-0002-0001-0001">
+                    <address>
+                        <floor>1</floor>
+                        <door>TV</door>
+                    </address>
+                    <task-list task-list-id="275020-b-0002-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1096000163300</recipient-id>
+                            <recipient-name>IVER HANSEN</recipient-name>
+                        </recipient>
+                        <task>
+                            <info>
+                                <info-unit type="complaint-text">SKAL LEVERES PÅ ETAGEN -SKAL IKKE I POSTKASSEANLÆG</info-unit>
+                                <info-unit type="complaint-date">03-09-2018</info-unit>
+                            </info>
+                            <item quantity="1">
+                                <item-id>107</item-id>
+                                <item-name>EB</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">På måtten på etagen</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+    </complaints>
+    <main>
+        <task-list task-list-id="275020-c-0001">
+            <address>
+                <street>SVENSTRUPVEJ</street>
+            </address>
+            <task-list task-list-id="275020-c-0001-0001">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>695817</id>
+                    <number>9</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69662499" longitude="12.49028368" />
+                </address>
+                <task-list task-list-id="275020-c-0001-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0001-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1021524121900</recipient-id>
+                            <recipient-name>JETTE HASSELSTRØM</recipient-name>
+                        </recipient>
+                        <task task-id="275020-10" liga-id="779701170">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0001-0002">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1574960</id>
+                    <number>7</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69658738" longitude="12.4900256" />
+                </address>
+                <task-list task-list-id="275020-c-0001-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0001-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>1020270932700</recipient-id>
+                            <recipient-name>MARIANNE ZANDERSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-20" liga-id="779701169">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">I POSTKASSE VED HOVEDDØR</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0001-0003">
+                <info>
+                    <info-unit type="product-summary">BERL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1074914</id>
+                    <number>4</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.6962969" longitude="12.48949025" />
+                </address>
+                <task-list task-list-id="275020-c-0001-0003-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0001-0003-0001-0001">
+                        <recipient>
+                            <recipient-id>1023510430010</recipient-id>
+                            <recipient-name>LISE DUE EGHOLM</recipient-name>
+                        </recipient>
+                        <task task-id="275020-30" liga-id="779701123">
+                            <item quantity="1">
+                                <item-id>101</item-id>
+                                <item-name>BERL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">I POSTKASSE VED HOVEDDØR</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0001-0004">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1942507</id>
+                    <number>12</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69638051" longitude="12.49065988" />
+                </address>
+                <task-list task-list-id="275020-c-0001-0004-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0001-0004-0001-0001">
+                        <recipient>
+                            <recipient-id>1025077237500</recipient-id>
+                            <recipient-name>HEDDA BANK</recipient-name>
+                        </recipient>
+                        <task task-id="275020-40" liga-id="779701171">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE I HUSET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0002">
+            <address>
+                <street>RISBYHOLMVEJ</street>
+            </address>
+            <task-list task-list-id="275020-c-0002-0001">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1147421</id>
+                    <number>13</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69599697" longitude="12.49118286" />
+                </address>
+                <task-list task-list-id="275020-c-0002-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0002-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1025932948200</recipient-id>
+                            <recipient-name>MICHAEL WODICKH</recipient-name>
+                        </recipient>
+                        <task task-id="275020-50" liga-id="779701168">
+                            <info>
+                                <info-unit type="complaint-type">R</info-unit>
+                            </info>
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0002-0002">
+                <info>
+                    <info-unit type="product-summary">BERL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1339368</id>
+                    <number>26</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69645423" longitude="12.49186047" />
+                </address>
+                <task-list task-list-id="275020-c-0002-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0002-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>1023871880010</recipient-id>
+                            <recipient-name>GRITH SØNDERGAARD PEDERSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-60" liga-id="779701116">
+                            <item quantity="1">
+                                <item-id>101</item-id>
+                                <item-name>BERL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0003">
+            <address>
+                <street>FUGLSANG ALLÉ</street>
+            </address>
+            <task-list task-list-id="275020-c-0003-0001">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1043867</id>
+                    <number>125</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.6972893" longitude="12.49158475" />
+                </address>
+                <task-list task-list-id="275020-c-0003-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0003-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1025536124000</recipient-id>
+                            <recipient-name>JØRGEN HOLCK JENSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-70" liga-id="779701151">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0004">
+            <address>
+                <street>BÆKKESKOVVEJ</street>
+            </address>
+            <task-list task-list-id="275020-c-0004-0001">
+                <info>
+                    <info-unit type="product-summary">INF,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>2279858</id>
+                    <number>29</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69651099" longitude="12.49270931" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1300401215800</recipient-id>
+                            <recipient-name>FREDDI LARSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-80" liga-id="779701178">
+                            <item quantity="1">
+                                <item-id>130</item-id>
+                                <item-name>INF</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0002">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1946110</id>
+                    <number>27</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69638407" longitude="12.49274574" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>1020208447300</recipient-id>
+                            <recipient-name>HENNING LEHMANN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-90" liga-id="779701140">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE I HUSET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0003">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>186179</id>
+                    <number>25</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.6962567" longitude="12.49279805" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0003-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0003-0001-0001">
+                        <recipient>
+                            <recipient-id>1021416023800</recipient-id>
+                            <recipient-name>NIELS WINTHER HANSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-100" liga-id="779701139">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0004">
+                <info>
+                    <info-unit type="product-summary">POL,1;TMABM,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>170107</id>
+                    <number>23</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69611501" longitude="12.49272172" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0004-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0004-0001-0001">
+                        <recipient>
+                            <recipient-id>1020208542100</recipient-id>
+                            <recipient-name>BO MØLLER</recipient-name>
+                        </recipient>
+                        <task task-id="275020-110" liga-id="779701167">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0004-0004-0002">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0004-0002-0001">
+                        <recipient>
+                            <recipient-id>13596740</recipient-id>
+                            <recipient-name>BO MØLLER</recipient-name>
+                        </recipient>
+                        <task task-id="275020-120" liga-id="779701113">
+                            <item quantity="1" additional-item-info="A 63">
+                                <item-id>42830</item-id>
+                                <item-name>TMABM</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0005">
+                <info>
+                    <info-unit type="product-summary">BERL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>886067</id>
+                    <number>13</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69546692" longitude="12.49306187" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0005-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0005-0001-0001">
+                        <recipient>
+                            <recipient-id>1023033710010</recipient-id>
+                            <recipient-name>STEEN SINDING-OLSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-130" liga-id="779701115">
+                            <item quantity="1">
+                                <item-id>101</item-id>
+                                <item-name>BERL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0006">
+                <info>
+                    <info-unit type="product-summary">FLEAS,1;POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>626691</id>
+                    <number>9</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69516199" longitude="12.49303464" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0006-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0006-0001-0001">
+                        <recipient>
+                            <recipient-id>10092130</recipient-id>
+                            <recipient-name>JENS UHRENHOLT</recipient-name>
+                        </recipient>
+                        <task task-id="275020-140" liga-id="779701183">
+                            <item quantity="1">
+                                <item-id>997</item-id>
+                                <item-name>FLEAS</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0004-0006-0002">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0006-0002-0001">
+                        <recipient>
+                            <recipient-id>1020689032100</recipient-id>
+                            <recipient-name>JENS UHRENHOLT</recipient-name>
+                        </recipient>
+                        <task task-id="275020-150" liga-id="779701163">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0007">
+                <info>
+                    <info-unit type="product-summary">POL,1;FLEAS,1;KRD,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>626718</id>
+                    <number>8</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69507931" longitude="12.49372773" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0007-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0007-0001-0001">
+                        <recipient>
+                            <recipient-id>1025847487500</recipient-id>
+                            <recipient-name>INGRID HILDEBRANDT</recipient-name>
+                        </recipient>
+                        <task task-id="275020-160" liga-id="779701162">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0004-0007-0002">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0007-0002-0001">
+                        <recipient>
+                            <recipient-id>4104588</recipient-id>
+                            <recipient-name>NIELSEN HILDEBRANDT</recipient-name>
+                        </recipient>
+                        <task task-id="275020-170" liga-id="779701182">
+                            <item quantity="1">
+                                <item-id>997</item-id>
+                                <item-name>FLEAS</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0004-0007-0003">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0007-0003-0001">
+                        <recipient>
+                            <recipient-id>10003550</recipient-id>
+                            <recipient-name>NIELSEN I. HILDEBRANDT</recipient-name>
+                        </recipient>
+                        <task task-id="275020-180" liga-id="779701174">
+                            <item quantity="1">
+                                <item-id>103</item-id>
+                                <item-name>KRD</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0008">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;BERL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>630637</id>
+                    <number>10</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.6951901" longitude="12.49362618" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0008-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0008-0001-0001">
+                        <recipient>
+                            <recipient-id>5000115708732</recipient-id>
+                            <recipient-name>METTE THIBERG</recipient-name>
+                        </recipient>
+                        <task task-id="275020-190" liga-id="779701126">
+                            <item quantity="1" additional-item-info="A 79">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0004-0008-0002">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0008-0002-0001">
+                        <recipient>
+                            <recipient-id>1016476760010</recipient-id>
+                            <recipient-name>METTE THIBERG BASCON A/S</recipient-name>
+                        </recipient>
+                        <task task-id="275020-200" liga-id="779701114">
+                            <item quantity="1">
+                                <item-id>101</item-id>
+                                <item-name>BERL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE I HUSET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0009">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>544424</id>
+                    <number>10</number>
+                    <litra>A</litra>
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69524482" longitude="12.49359923" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0009-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0009-0001-0001">
+                        <recipient>
+                            <recipient-id>1025918436600</recipient-id>
+                            <recipient-name>MORTEN VYFF</recipient-name>
+                        </recipient>
+                        <task task-id="275020-210" liga-id="779701164">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE I HUSET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0010">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>2215320</id>
+                    <number>18</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69588031" longitude="12.49338533" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0010-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0010-0001-0001">
+                        <recipient>
+                            <recipient-id>1025211345300</recipient-id>
+                            <recipient-name>MARIA KLINT THELANDER</recipient-name>
+                        </recipient>
+                        <task task-id="275020-220" liga-id="779701165">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0011">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1938610</id>
+                    <number>22</number>
+                    <litra>A</litra>
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69617002" longitude="12.49331568" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0011-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0011-0001-0001">
+                        <recipient>
+                            <recipient-id>1020539819300</recipient-id>
+                            <recipient-name>JETTE BORCHSENIUS</recipient-name>
+                        </recipient>
+                        <task task-id="275020-230" liga-id="779701166">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0012">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1975991</id>
+                    <number>30</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69683959" longitude="12.4931685" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0012-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0012-0001-0001">
+                        <recipient>
+                            <recipient-id>1020985753300</recipient-id>
+                            <recipient-name>K. HERTZ</recipient-name>
+                        </recipient>
+                        <task task-id="275020-240" liga-id="779701141">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0004-0013">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1896189</id>
+                    <number>32</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69698851" longitude="12.49299075" />
+                </address>
+                <task-list task-list-id="275020-c-0004-0013-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0004-0013-0001-0001">
+                        <recipient>
+                            <recipient-id>1020127793800</recipient-id>
+                            <recipient-name>ANNETTE TORP</recipient-name>
+                        </recipient>
+                        <task task-id="275020-250" liga-id="779701142">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0005">
+            <address>
+                <street>BORREBYVEJ</street>
+            </address>
+            <task-list task-list-id="275020-c-0005-0001">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>2007033</id>
+                    <number>27</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69665508" longitude="12.49396396" />
+                </address>
+                <task-list task-list-id="275020-c-0005-0001-0001">
+                    <address>
+                        <floor>ST</floor>
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0005-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1020207263500</recipient-id>
+                            <recipient-name>FLEMMING GJØL</recipient-name>
+                        </recipient>
+                        <task task-id="275020-260" liga-id="779701156">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE I HUSET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0005-0002">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>221870</id>
+                    <number>21</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69616316" longitude="12.49387227" />
+                </address>
+                <task-list task-list-id="275020-c-0005-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0005-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>1025110796900</recipient-id>
+                            <recipient-name>LISBETH NØRREMARK ØSTERGAARD</recipient-name>
+                        </recipient>
+                        <task task-id="275020-270" liga-id="779701155">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0005-0003">
+                <info>
+                    <info-unit type="product-summary">TMABM,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>250169</id>
+                    <number>17</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69586531" longitude="12.49422775" />
+                </address>
+                <task-list task-list-id="275020-c-0005-0003-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0005-0003-0001-0001">
+                        <recipient>
+                            <recipient-id>13597912</recipient-id>
+                            <recipient-name>HEIDI FRIIS HANSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-280" liga-id="779701112">
+                            <item quantity="1" additional-item-info="A 107">
+                                <item-id>42830</item-id>
+                                <item-name>TMABM</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0005-0004">
+                <info>
+                    <info-unit type="product-summary">ARB,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>2016122</id>
+                    <number>15</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.695694" longitude="12.49424429" />
+                </address>
+                <task-list task-list-id="275020-c-0005-0004-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0005-0004-0001-0001">
+                        <recipient>
+                            <recipient-id>5000219758007</recipient-id>
+                            <recipient-name>FOLKETINGETS OMBUDSMAND ATT: MARIE HELQVIST</recipient-name>
+                        </recipient>
+                        <task task-id="275020-290" liga-id="779701124">
+                            <item quantity="1">
+                                <item-id>486</item-id>
+                                <item-name>ARB</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0005-0005">
+                <info>
+                    <info-unit type="product-summary">ABOBO,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>2301137</id>
+                    <number>8</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.6949633" longitude="12.4949591" />
+                </address>
+                <task-list task-list-id="275020-c-0005-0005-0001">
+                    <address>
+                        <floor>1</floor>
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0005-0005-0001-0001">
+                        <recipient>
+                            <recipient-id>6960303342331</recipient-id>
+                            <recipient-name>HANNE MUNK SCHELLER</recipient-name>
+                        </recipient>
+                        <task task-id="275020-300" liga-id="779701184">
+                            <item quantity="1">
+                                <item-id>7000</item-id>
+                                <item-name>ABOBO</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <info>
+                                    <info-unit type="receipt">1</info-unit>
+                                    <info-unit type="barcode">00057126960303342331</info-unit>
+                                </info>
+                                <action-type>scan</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0005-0006">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>902327</id>
+                    <number>10</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69516642" longitude="12.49508868" />
+                </address>
+                <task-list task-list-id="275020-c-0005-0006-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0005-0006-0001-0001">
+                        <recipient>
+                            <recipient-id>1024148081500</recipient-id>
+                            <recipient-name>TONNY HØRNING</recipient-name>
+                        </recipient>
+                        <task task-id="275020-310" liga-id="779701152">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE I HUSET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0005-0007">
+                <info>
+                    <info-unit type="product-summary">ODEDA,1;POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1198129</id>
+                    <number>16</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69561719" longitude="12.49473095" />
+                </address>
+                <task-list task-list-id="275020-c-0005-0007-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0005-0007-0001-0001">
+                        <recipient>
+                            <recipient-id>5000204229359</recipient-id>
+                            <recipient-name>HANS HENRIK BÆKBO</recipient-name>
+                        </recipient>
+                        <task task-id="275020-320" liga-id="779701110">
+                            <item quantity="1" additional-item-info="A 126">
+                                <item-id>42402</item-id>
+                                <item-name>ODEDA</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0005-0007-0002">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0005-0007-0002-0001">
+                        <recipient>
+                            <recipient-id>1025979144200</recipient-id>
+                            <recipient-name>HENRIK BÆKBO</recipient-name>
+                        </recipient>
+                        <task task-id="275020-330" liga-id="779701153">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0005-0008">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>133051</id>
+                    <number>20</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69593472" longitude="12.49463195" />
+                </address>
+                <task-list task-list-id="275020-c-0005-0008-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0005-0008-0001-0001">
+                        <recipient>
+                            <recipient-id>1025253657000</recipient-id>
+                            <recipient-name>OLE SNORGAARD</recipient-name>
+                        </recipient>
+                        <task task-id="275020-340" liga-id="779701154">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0005-0009">
+                <info>
+                    <info-unit type="product-summary">ODEDA,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>388043</id>
+                    <number>28</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69663699" longitude="12.49459916" />
+                </address>
+                <task-list task-list-id="275020-c-0005-0009-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0005-0009-0001-0001">
+                        <recipient>
+                            <recipient-id>5000204229364</recipient-id>
+                            <recipient-name>LARS EWALD</recipient-name>
+                        </recipient>
+                        <task task-id="275020-350" liga-id="779701111">
+                            <item quantity="1" additional-item-info="A 132">
+                                <item-id>42402</item-id>
+                                <item-name>ODEDA</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0006">
+            <address>
+                <street>FUGLSANG ALLÉ</street>
+            </address>
+            <task-list task-list-id="275020-c-0006-0001">
+                <info>
+                    <info-unit type="product-summary">POL,1;BERL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>252391</id>
+                    <number>109</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69762226" longitude="12.49441651" />
+                </address>
+                <task-list task-list-id="275020-c-0006-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1024075089500</recipient-id>
+                            <recipient-name>JENS BALSLEV</recipient-name>
+                        </recipient>
+                        <task task-id="275020-360" liga-id="779701150">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">I POSTKASSE VED HOVEDDØR</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0001-0002">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0001-0002-0001">
+                        <recipient>
+                            <recipient-id>1000220410010</recipient-id>
+                            <recipient-name>ULLA BADEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-370" liga-id="779701122">
+                            <item quantity="1">
+                                <item-id>101</item-id>
+                                <item-name>BERL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">I POSTKASSE VED HOVEDDØR</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0006-0002">
+                <info>
+                    <info-unit type="product-summary">POL,7;BERL,5;EB,1;BT,1;</info-unit>
+                    <info-unit type="label-summary">14</info-unit>
+                </info>
+                <address>
+                    <info>
+                        <info-unit type="message">Adresse bemærkning fra husnr [103] til husnr [103] lev i plastikpose ved hoveddøren </info-unit>
+                    </info>
+                    <id>1694324</id>
+                    <number>103</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69771833" longitude="12.49577836" />
+                </address>
+                <task-list task-list-id="275020-c-0006-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>1025262849200</recipient-id>
+                            <recipient-name>JYTTE JESPERSEN</recipient-name>
+                            <recipient-detail>JOHANNESGÅRDEN, LEJLIGHED 119</recipient-detail>
+                        </recipient>
+                        <task task-id="275020-390" liga-id="779701143">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0002">
+                    <address>
+                        <floor />
+                        <door>113</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0002-0001">
+                        <recipient>
+                            <recipient-id>1019122060010</recipient-id>
+                            <recipient-name>LILLY AGESEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-400" liga-id="779701119">
+                            <item quantity="1">
+                                <item-id>101</item-id>
+                                <item-name>BERL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0003">
+                    <address>
+                        <floor />
+                        <door>313</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0003-0001">
+                        <recipient>
+                            <recipient-id>1025239810400</recipient-id>
+                            <recipient-name>BIRTHE HANSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-410" liga-id="779701147">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0004">
+                    <address>
+                        <floor />
+                        <door>317</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0004-0001">
+                        <recipient>
+                            <recipient-id>1000076400010</recipient-id>
+                            <recipient-name>GERDA SKOV</recipient-name>
+                        </recipient>
+                        <task task-id="275020-420" liga-id="779701118">
+                            <item quantity="1">
+                                <item-id>101</item-id>
+                                <item-name>BERL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0005">
+                    <address>
+                        <floor>1</floor>
+                        <door>105</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0005-0001">
+                        <recipient>
+                            <recipient-id>1020272922600</recipient-id>
+                            <recipient-name>ANNIE AGGERBECK</recipient-name>
+                            <recipient-detail>JOHANNESGÅRDEN PLEJEHJEM</recipient-detail>
+                        </recipient>
+                        <task task-id="275020-430" liga-id="779701144">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0006">
+                    <address>
+                        <floor>1</floor>
+                        <door>110</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0006-0001">
+                        <recipient>
+                            <recipient-id>1024361392600</recipient-id>
+                            <recipient-name>ANNE-LISE FAGER</recipient-name>
+                        </recipient>
+                        <task task-id="275020-440" liga-id="779701148">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">RING PÅ, NÅR AVIS ER LEVERET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0007">
+                    <address>
+                        <floor>2</floor>
+                        <door>22</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0007-0001">
+                        <recipient>
+                            <recipient-id>1020208423400</recipient-id>
+                            <recipient-name>BIRTHE JAKOBSEN</recipient-name>
+                            <recipient-detail>JOHANNESGÅRDEN</recipient-detail>
+                        </recipient>
+                        <task task-id="275020-450" liga-id="779701149">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0008">
+                    <address>
+                        <floor>2</floor>
+                        <door>221</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0008-0001">
+                        <recipient>
+                            <recipient-id>1025247830010</recipient-id>
+                            <recipient-name>KIRSTEN BRAARVIG</recipient-name>
+                            <recipient-detail>VÆRELSE 221</recipient-detail>
+                        </recipient>
+                        <task task-id="275020-460" liga-id="779701117">
+                            <item quantity="1">
+                                <item-id>101</item-id>
+                                <item-name>BERL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0009">
+                    <address>
+                        <floor>2</floor>
+                        <door>223</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0009-0001">
+                        <recipient>
+                            <recipient-id>1025962562400</recipient-id>
+                            <recipient-name>ERIK SØBORG RASMUSSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-470" liga-id="779701145">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0010">
+                    <address>
+                        <floor>2</floor>
+                        <door>224</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0010-0001">
+                        <recipient>
+                            <recipient-id>1095922648000</recipient-id>
+                            <recipient-name>WILLIAM HEMPEL</recipient-name>
+                            <recipient-detail>JOHANNESGÅRDEN</recipient-detail>
+                        </recipient>
+                        <task task-id="275020-480" liga-id="779701177">
+                            <item quantity="1">
+                                <item-id>107</item-id>
+                                <item-name>EB</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0011">
+                    <address>
+                        <floor>3</floor>
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0011-0001">
+                        <recipient>
+                            <recipient-id>1021094340010</recipient-id>
+                            <recipient-name>LISSIE RIBER</recipient-name>
+                            <recipient-detail>JOHANNES GÅRDEN</recipient-detail>
+                        </recipient>
+                        <task task-id="275020-490" liga-id="779701175">
+                            <item quantity="1">
+                                <item-id>106</item-id>
+                                <item-name>BT</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0012">
+                    <address>
+                        <floor>3</floor>
+                        <door>301</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0012-0001">
+                        <recipient>
+                            <recipient-id>1013853120010</recipient-id>
+                            <recipient-name>POUL ARNE JARLSHØI</recipient-name>
+                            <recipient-detail>JOHANNESGÅRDEN</recipient-detail>
+                        </recipient>
+                        <task task-id="275020-500" liga-id="779701121">
+                            <item quantity="1">
+                                <item-id>101</item-id>
+                                <item-name>BERL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0013">
+                    <address>
+                        <floor>3</floor>
+                        <door>301</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0013-0001">
+                        <recipient>
+                            <recipient-id>1025236329800</recipient-id>
+                            <recipient-name>POUL JARLSHØI</recipient-name>
+                            <recipient-detail>JOHANNESGÅRDEN</recipient-detail>
+                        </recipient>
+                        <task task-id="275020-510" liga-id="779701146">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0006-0002-0014">
+                    <address>
+                        <floor>2</floor>
+                        <door>208</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0002-0014-0001">
+                        <recipient>
+                            <recipient-id>1000680000010</recipient-id>
+                            <recipient-name>MINNA GRENIMAN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-520" liga-id="779701120">
+                            <item quantity="1">
+                                <item-id>101</item-id>
+                                <item-name>BERL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE PÅ ETAGEN</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <action-type>add label</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0006-0003">
+                <info>
+                    <info-unit type="product-summary">CREAT,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>540955</id>
+                    <number>97</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69771989" longitude="12.49667006" />
+                </address>
+                <task-list task-list-id="275020-c-0006-0003-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0006-0003-0001-0001">
+                        <recipient>
+                            <recipient-id>5000230551167</recipient-id>
+                            <recipient-name>INTEGR. INST. LÆRKEREDEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-530" liga-id="779701172">
+                            <item quantity="1" additional-item-info="A 142">
+                                <item-id>42773</item-id>
+                                <item-name>CREAT</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0007">
+            <address>
+                <street>HEGNSHUSENE</street>
+            </address>
+            <task-list task-list-id="275020-c-0007-0001">
+                <info>
+                    <info-unit type="product-summary">JP,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1668377</id>
+                    <number>6</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69708041" longitude="12.49828456" />
+                </address>
+                <task-list task-list-id="275020-c-0007-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0007-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1380040077324</recipient-id>
+                            <recipient-name>JESPER HAVEMANN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-550" liga-id="779701180">
+                            <item quantity="1">
+                                <item-id>138</item-id>
+                                <item-name>JP</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0007-0002">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>610599</id>
+                    <number>10</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69691716" longitude="12.49833365" />
+                </address>
+                <task-list task-list-id="275020-c-0007-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0007-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>5000043246082</recipient-id>
+                            <recipient-name>UFFE C. BYRLUND</recipient-name>
+                        </recipient>
+                        <task task-id="275020-560" liga-id="779701128">
+                            <item quantity="1" additional-item-info="A 158">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0008">
+            <address>
+                <street>HEGNSHUSENE</street>
+            </address>
+            <task-list task-list-id="275020-c-0008-0001">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>883196</id>
+                    <number>44</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69697124" longitude="12.49738326" />
+                </address>
+                <task-list task-list-id="275020-c-0008-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0008-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>5000232394773</recipient-id>
+                            <recipient-name>RASMUS DAMKJÆR-OHLSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-580" liga-id="779701130">
+                            <item quantity="1" additional-item-info="A 165">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0008-0002">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>340488</id>
+                    <number>38</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.6971623" longitude="12.49730481" />
+                </address>
+                <task-list task-list-id="275020-c-0008-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0008-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>5000043239014</recipient-id>
+                            <recipient-name>FLEMMING JAHR</recipient-name>
+                        </recipient>
+                        <task task-id="275020-590" liga-id="779701129">
+                            <item quantity="1" additional-item-info="A 171">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0009">
+            <address>
+                <street>HEGNSHUSENE</street>
+            </address>
+            <task-list task-list-id="275020-c-0009-0001">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1211271</id>
+                    <number>72</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.6968319" longitude="12.49690911" />
+                </address>
+                <task-list task-list-id="275020-c-0009-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0009-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1025236894100</recipient-id>
+                            <recipient-name>ANNE-MARIE KJELDSET</recipient-name>
+                        </recipient>
+                        <task task-id="275020-610" liga-id="779701157">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE I HUSET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0010">
+            <address>
+                <street>HEGNSHUSENE</street>
+            </address>
+            <task-list task-list-id="275020-c-0010-0001">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>375856</id>
+                    <number>96</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69701906" longitude="12.49633678" />
+                </address>
+                <task-list task-list-id="275020-c-0010-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0010-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>5000043259903</recipient-id>
+                            <recipient-name>JETTE BIJKERK</recipient-name>
+                        </recipient>
+                        <task task-id="275020-630" liga-id="779701132">
+                            <item quantity="1" additional-item-info="A 195">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0010-0002">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>2361790</id>
+                    <number>78</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69716157" longitude="12.49669977" />
+                </address>
+                <task-list task-list-id="275020-c-0010-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0010-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>5000043259876</recipient-id>
+                            <recipient-name>HENRIK HAUSTED</recipient-name>
+                        </recipient>
+                        <task task-id="275020-640" liga-id="779701131">
+                            <item quantity="1" additional-item-info="A 198">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0011">
+            <address>
+                <street>HEGNSHUSENE</street>
+            </address>
+            <task-list task-list-id="275020-c-0011-0001">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1048841</id>
+                    <number>110</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69704062" longitude="12.49621134" />
+                </address>
+                <task-list task-list-id="275020-c-0011-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0011-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1025746772200</recipient-id>
+                            <recipient-name>PREBEN JØRGENSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-660" liga-id="779701158">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE I HUSET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0011-0002">
+                <info>
+                    <info-unit type="product-summary">13,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1335570</id>
+                    <number>130</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69683442" longitude="12.49587451" />
+                </address>
+                <task-list task-list-id="275020-c-0011-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0011-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>5000237461828</recipient-id>
+                            <recipient-name>PALLE RASMUSSEN</recipient-name>
+                            <recipient-detail>-</recipient-detail>
+                        </recipient>
+                        <task task-id="275020-670" liga-id="779701125">
+                            <item quantity="1">
+                                <item-id>4281</item-id>
+                                <item-name>13</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0011-0003">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>741272</id>
+                    <number>132</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69676177" longitude="12.49589985" />
+                </address>
+                <task-list task-list-id="275020-c-0011-0003-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0011-0003-0001-0001">
+                        <recipient>
+                            <recipient-id>5000043255217</recipient-id>
+                            <recipient-name>SARAH CHOUAIKHI</recipient-name>
+                        </recipient>
+                        <task task-id="275020-680" liga-id="779701134">
+                            <item quantity="1" additional-item-info="A 214">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0011-0004">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;ABOBO,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>992848</id>
+                    <number>134</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69668911" longitude="12.4959252" />
+                </address>
+                <task-list task-list-id="275020-c-0011-0004-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0011-0004-0001-0001">
+                        <recipient>
+                            <recipient-id>5000043240832</recipient-id>
+                            <recipient-name>JETTE MADSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-690" liga-id="779701135">
+                            <item quantity="1" additional-item-info="A 216">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0011-0004-0002">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0011-0004-0002-0001">
+                        <recipient>
+                            <recipient-id>6960302257049</recipient-id>
+                            <recipient-name>SELMA ZEKIRI LIND ATT: ATT: SE</recipient-name>
+                        </recipient>
+                        <task task-id="275020-700" liga-id="779701187">
+                            <item quantity="1">
+                                <item-id>7000</item-id>
+                                <item-name>ABOBO</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <info>
+                                    <info-unit type="receipt">1</info-unit>
+                                    <info-unit type="barcode">00057126960302257049</info-unit>
+                                </info>
+                                <action-type>scan</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0012">
+            <address>
+                <street>HEGNSHUSENE</street>
+            </address>
+            <task-list task-list-id="275020-c-0012-0001">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1748304</id>
+                    <number>154</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69712249" longitude="12.49523158" />
+                </address>
+                <task-list task-list-id="275020-c-0012-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0012-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>5000043259582</recipient-id>
+                            <recipient-name>ARNO WILLY NIELSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-720" liga-id="779701136">
+                            <item quantity="1" additional-item-info="A 232">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0013">
+            <address>
+                <street>HEGNSHUSENE</street>
+            </address>
+            <task-list task-list-id="275020-c-0013-0001">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>476645</id>
+                    <number>179</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69619012" longitude="12.49545077" />
+                </address>
+                <task-list task-list-id="275020-c-0013-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0013-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>5000043249036</recipient-id>
+                            <recipient-name>HENNING SPECHT</recipient-name>
+                        </recipient>
+                        <task task-id="275020-750" liga-id="779701138">
+                            <item quantity="1" additional-item-info="A 244">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0013-0001-0002">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0013-0001-0002-0001">
+                        <recipient>
+                            <recipient-id>1022091417200</recipient-id>
+                            <recipient-name>HENNING SPECHT</recipient-name>
+                        </recipient>
+                        <task task-id="275020-760" liga-id="779701161">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE I HUSET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0013-0002">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>351649</id>
+                    <number>177</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69611746" longitude="12.49547612" />
+                </address>
+                <task-list task-list-id="275020-c-0013-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0013-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>5000043232350</recipient-id>
+                            <recipient-name>BJARNE JENSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-770" liga-id="779701137">
+                            <item quantity="1" additional-item-info="A 245">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0013-0002-0002">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0013-0002-0002-0001">
+                        <recipient>
+                            <recipient-id>1020208112300</recipient-id>
+                            <recipient-name>BJARNE JENSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-780" liga-id="779701160">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE I HUSET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0013-0003">
+                <info>
+                    <info-unit type="product-summary">INF,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>65239</id>
+                    <number>169</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69583582" longitude="12.49557832" />
+                </address>
+                <task-list task-list-id="275020-c-0013-0003-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0013-0003-0001-0001">
+                        <recipient>
+                            <recipient-id>1300576979900</recipient-id>
+                            <recipient-name>KARIN D. LARSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-790" liga-id="779701181">
+                            <item quantity="1">
+                                <item-id>130</item-id>
+                                <item-name>INF</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0014">
+            <address>
+                <street>HEGNSHUSENE</street>
+            </address>
+            <task-list task-list-id="275020-c-0014-0001">
+                <info>
+                    <info-unit type="product-summary">POL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1480658</id>
+                    <number>127</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69620789" longitude="12.49608917" />
+                </address>
+                <task-list task-list-id="275020-c-0014-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0014-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1025960200300</recipient-id>
+                            <recipient-name>LARS BO JACOBSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-820" liga-id="779701159">
+                            <item quantity="1">
+                                <item-id>102</item-id>
+                                <item-name>POL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0014-0002">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>853220</id>
+                    <number>107</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69605036" longitude="12.49656861" />
+                </address>
+                <task-list task-list-id="275020-c-0014-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0014-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>5000043232351</recipient-id>
+                            <recipient-name>KURT SCHØLLER</recipient-name>
+                        </recipient>
+                        <task task-id="275020-830" liga-id="779701133">
+                            <item quantity="1" additional-item-info="A 278">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0015">
+            <address>
+                <street>HEGNSHUSENE</street>
+            </address>
+            <task-list task-list-id="275020-c-0015-0001">
+                <info>
+                    <info-unit type="product-summary">SANBL,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>432979</id>
+                    <number>25</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69630512" longitude="12.49804012" />
+                </address>
+                <task-list task-list-id="275020-c-0015-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0015-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>5000256922253</recipient-id>
+                            <recipient-name>ANANDA ANDERSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-880" liga-id="779701109">
+                            <item quantity="1">
+                                <item-id>4842</item-id>
+                                <item-name>SANBL</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0015-0002">
+                <info>
+                    <info-unit type="product-summary">ABOBO,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1717335</id>
+                    <number>41</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69635322" longitude="12.49761457" />
+                </address>
+                <task-list task-list-id="275020-c-0015-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0015-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>6960302413186</recipient-id>
+                            <recipient-name>AZA ALI</recipient-name>
+                        </recipient>
+                        <task task-id="275020-890" liga-id="779701186">
+                            <item quantity="1">
+                                <item-id>7000</item-id>
+                                <item-name>ABOBO</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                            <action>
+                                <info>
+                                    <info-unit type="receipt">1</info-unit>
+                                    <info-unit type="barcode">00057126960302413186</info-unit>
+                                </info>
+                                <action-type>scan</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0016">
+            <address>
+                <street>HEGNSHUSENE</street>
+            </address>
+            <task-list task-list-id="275020-c-0016-0001">
+                <info>
+                    <info-unit type="product-summary">BOLIG,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>380997</id>
+                    <number>3</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69642652" longitude="12.49851266" />
+                </address>
+                <task-list task-list-id="275020-c-0016-0001-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0016-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>5000043239840</recipient-id>
+                            <recipient-name>PER CHRISTENSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-910" liga-id="779701127">
+                            <item quantity="1" additional-item-info="A 326">
+                                <item-id>41037</item-id>
+                                <item-name>BOLIG</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+            <task-list task-list-id="275020-c-0016-0002">
+                <info>
+                    <info-unit type="product-summary">CREAT,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <id>1692701</id>
+                    <number>9</number>
+                    <litra>A</litra>
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69673553" longitude="12.49839701" />
+                </address>
+                <task-list task-list-id="275020-c-0016-0002-0001">
+                    <address>
+                        <floor />
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0016-0002-0001-0001">
+                        <recipient>
+                            <recipient-id>5000230551134</recipient-id>
+                            <recipient-name>BRØNSPARKENS FRITIDSCENTER</recipient-name>
+                        </recipient>
+                        <task task-id="275020-920" liga-id="779701173">
+                            <item quantity="1" additional-item-info="A 334">
+                                <item-id>42773</item-id>
+                                <item-name>CREAT</item-name>
+                            </item>
+                            <action>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+        <task-list task-list-id="275020-c-0017">
+            <address>
+                <street>BRØNSHØJVEJ</street>
+            </address>
+            <task-list task-list-id="275020-c-0017-0001">
+                <info>
+                    <info-unit type="product-summary">JP,1;EB,1;</info-unit>
+                    <info-unit type="label-summary">0</info-unit>
+                </info>
+                <address>
+                    <info>
+                        <info-unit type="key-info">1/14</info-unit>
+                    </info>
+                    <id>1357679</id>
+                    <number>76</number>
+                    <litra />
+                    <postnr>2700</postnr>
+                    <city>Brønshøj</city>
+                    <geo-data latitude="55.69598696" longitude="12.49879176" />
+                </address>
+                <task-list task-list-id="275020-c-0017-0001-0001">
+                    <address>
+                        <floor>ST</floor>
+                        <door />
+                    </address>
+                    <task-list task-list-id="275020-c-0017-0001-0001-0001">
+                        <recipient>
+                            <recipient-id>1380085244854</recipient-id>
+                            <recipient-name>SPARHOLT VVS APS</recipient-name>
+                        </recipient>
+                        <task task-id="275020-930" liga-id="779701179">
+                            <item quantity="1">
+                                <item-id>138</item-id>
+                                <item-name>JP</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">GENNEM BREVSPRÆKKE I HUSET</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+                <task-list task-list-id="275020-c-0017-0001-0002">
+                    <address>
+                        <floor>1</floor>
+                        <door>TV</door>
+                    </address>
+                    <task-list task-list-id="275020-c-0017-0001-0002-0001">
+                        <recipient>
+                            <recipient-id>1096000163300</recipient-id>
+                            <recipient-name>IVER HANSEN</recipient-name>
+                        </recipient>
+                        <task task-id="275020-940" liga-id="779701176">
+                            <info>
+                                <info-unit type="complaint-type">R</info-unit>
+                            </info>
+                            <item quantity="1">
+                                <item-id>107</item-id>
+                                <item-name>EB</item-name>
+                            </item>
+                            <action>
+                                <info>
+                                    <info-unit type="message">PÅ MÅTTEN PÅ ETAGEN</info-unit>
+                                </info>
+                                <action-type>delivery</action-type>
+                            </action>
+                        </task>
+                    </task-list>
+                </task-list>
+            </task-list>
+        </task-list>
+    </main>
+</job>

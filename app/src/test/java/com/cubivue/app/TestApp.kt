@@ -1,26 +1,30 @@
 package com.cubivue.app
 
 import android.app.Activity
-import android.app.Application
 import com.cubivue.app.di.DaggerTestAppComponent
+import com.cubivue.app.di.TestAppComponent
 import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
-import javax.inject.Inject
 
-class TestApp : Application(), HasActivityInjector {
+class TestApp : App(), HasActivityInjector {
 
-    @Inject
-    lateinit var dispatchingActivityInjector: DispatchingAndroidInjector<Activity>
+    private var testApplicationComponent: TestAppComponent? = null
+
+
+    override fun createAppComponent(): TestAppComponent? {
+        if (testApplicationComponent == null) {
+            testApplicationComponent = DaggerTestAppComponent.builder()
+                    .testApp(this)
+                    .baseUrl(BuildConfig.BASE_URL)
+                    .build()
+
+        }
+        return testApplicationComponent
+    }
 
     override fun onCreate() {
         super.onCreate()
 
-        DaggerTestAppComponent
-                .builder()
-                .testApp(this)
-                .build()
-                .inject(this)
     }
 
     override fun activityInjector(): AndroidInjector<Activity> {

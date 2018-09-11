@@ -38,6 +38,9 @@ buildscript {
         //Logging
         implementation timber
 
+        //Realm Encryption
+        implementation realmEncryptionHelper
+
         //Test Libraries
         testImplementation testDependencies.junit
         //testImplementation testDependencies.testRules
@@ -54,9 +57,7 @@ buildscript {
 
         //preference module
         implementation project(":preference")
-
-        //material dialog
-        implementation materialDialog
+        testImplementation testDependencies.mockwebserver
     }
 
     repositories {
@@ -65,9 +66,9 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.0-alpha04'
+        classpath 'com.android.tools.build:gradle:3.3.0-alpha05'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "io.realm:realm-gradle-plugin:5.2.0"
+        classpath "io.realm:realm-gradle-plugin:5.4.2"
     }
 }
 
