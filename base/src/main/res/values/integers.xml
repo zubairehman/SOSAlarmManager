@@ -1,0 +1,8 @@
+<resources>
+    <integer name="anim_duration">240</integer>
+    <integer name="anim_duration_small">1600</integer>
+    <integer name="anim_duration_medium">500</integer>
+    <integer name="anim_duration_splash">800</integer>
+    <integer name="max_email_chars">255</integer>
+    <integer name="max_pass_chars">25</integer>
+</resources>

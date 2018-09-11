@@ -18,6 +18,7 @@ buildscript {
         implementation supportDependencies.constraint
         implementation supportDependencies.lifeCycle
         implementation supportDependencies.supportv13
+        implementation supportDependencies.design
 
         //Dagger
         implementation daggerDependencies.dagger
@@ -53,6 +54,9 @@ buildscript {
 
         //preference module
         implementation project(":preference")
+
+        //material dialog
+        implementation materialDialog
     }
 
     repositories {

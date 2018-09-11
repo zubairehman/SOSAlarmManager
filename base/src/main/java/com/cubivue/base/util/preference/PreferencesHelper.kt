@@ -90,13 +90,6 @@ class PreferencesHelper private constructor(context: Context) {
         //keys
         val KEY_USER_ID = BASE_PACKAGE_NAME + "USER_ID"
 
-        //preference key variables
-        private val KEY_NAME = BASE_PACKAGE_NAME + "NAME"
-        private val KEY_AGE = BASE_PACKAGE_NAME + "AGE"
-        private val KEY_DOB = BASE_PACKAGE_NAME + "DOB"
-        private val KEY_WEIGHT = BASE_PACKAGE_NAME + "WEIGHT"
-        private val KEY_MARRIED = BASE_PACKAGE_NAME + "MARRIED"
-
         @Synchronized
         fun initializeInstance(context: Context) {
             if (mInstance == null) {

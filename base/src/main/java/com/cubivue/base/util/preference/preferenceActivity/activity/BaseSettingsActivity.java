@@ -47,7 +47,6 @@ public class BaseSettingsActivity extends AbstractPreferenceActivity
     private static final String KEY_DISPLAY_MODE = BASE_PACKAGE_NAME + "DISPLAY_MODE";
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

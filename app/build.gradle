@@ -47,7 +47,7 @@ android {
 
     testOptions { //used for Orchestrator
         execution "ANDROID_TEST_ORCHESTRATOR"
-        unitTests{
+        unitTests {
             includeAndroidResources true
             returnDefaultValues = true
         }

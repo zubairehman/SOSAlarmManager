@@ -184,7 +184,7 @@ class PermissionManager {
                 } else v4fragment?.requestPermissions(permissionToAsk, key)
             }
         } else {
-            permissionsGranted!!.addAll(this!!.permissions!!)
+            permissionsGranted!!.addAll(this.permissions!!)
             showResult()
         }
     }

@@ -4,6 +4,7 @@
     package="com.cubivue.base">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,8 +14,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".util.preference.preferenceActivity.activity.BaseSettingsActivity"
-            android:label="@string/activity_preference_title">
-        </activity>
+            android:label="@string/activity_preference_title" />
+        <activity android:name=".util.menu.activities.BaseMenuActivity" />
     </application>
 
 </manifest>

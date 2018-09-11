@@ -14,18 +14,18 @@ implied. See the License for the specific language governing permissions and lim
 License.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:background="?attr/selectableItemBackground"
-              android:baselineAligned="false"
-              android:clipToPadding="false"
-              android:descendantFocusability="blocksDescendants"
-              android:gravity="center_vertical"
-              android:minHeight="@dimen/preference_min_height"
-              android:paddingEnd="@dimen/preference_horizontal_padding"
-              android:paddingLeft="@dimen/preference_horizontal_padding"
-              android:paddingRight="@dimen/preference_horizontal_padding"
-              android:paddingStart="@dimen/preference_horizontal_padding">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:baselineAligned="false"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/preference_min_height"
+    android:paddingStart="@dimen/preference_horizontal_padding"
+    android:paddingLeft="@dimen/preference_horizontal_padding"
+    android:paddingEnd="@dimen/preference_horizontal_padding"
+    android:paddingRight="@dimen/preference_horizontal_padding">
 
     <ImageView
         android:id="@android:id/icon"
@@ -34,14 +34,14 @@ License.
         android:layout_marginEnd="@dimen/preference_horizontal_padding"
         android:layout_marginRight="@dimen/preference_horizontal_padding"
         android:contentDescription="@null"
-        android:scaleType="centerInside"/>
+        android:scaleType="centerInside" />
 
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:paddingBottom="@dimen/preference_vertical_padding"
-        android:paddingTop="@dimen/preference_vertical_padding">
+        android:paddingTop="@dimen/preference_vertical_padding"
+        android:paddingBottom="@dimen/preference_vertical_padding">
 
         <TextView
             android:id="@android:id/title"
@@ -51,7 +51,7 @@ License.
             android:fadingEdge="horizontal"
             android:singleLine="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="?android:attr/textColorPrimary"/>
+            android:textColor="?android:attr/textColorPrimary" />
 
         <TextView
             android:id="@android:id/summary"
@@ -61,15 +61,15 @@ License.
             android:ellipsize="end"
             android:maxLines="4"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="?android:attr/textColorSecondary"/>
+            android:textColor="?android:attr/textColorSecondary" />
     </RelativeLayout>
 
     <LinearLayout
         android:id="@android:id/widget_frame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/preference_horizontal_padding"
         android:layout_marginStart="@dimen/preference_horizontal_padding"
-        android:orientation="vertical"/>
+        android:layout_marginLeft="@dimen/preference_horizontal_padding"
+        android:orientation="vertical" />
 
 </LinearLayout>
