@@ -106,10 +106,11 @@ ext {
             appCompat        : "com.android.support:appcompat-v7:${supportLibraryVersion}",
             supportAnnotation: "com.android.support:support-annotations:${supportLibraryVersion}",
             supportFragment  : "com.android.support:support-fragment:${supportLibraryVersion}",
-            supportv4        : "com.android.support:support-core-utils:${supportLibraryVersion}",
+            supportv4Utils   : "com.android.support:support-core-utils:${supportLibraryVersion}",
             constraint       : "com.android.support.constraint:constraint-layout:${constraintVersion}",
             lifeCycle        : "android.arch.lifecycle:extensions:${lifeCycleVersion}",
             supportv13       : "com.android.support:support-v13:${supportLibraryVersion}",
+            supportv4        : "com.android.support:support-compat:${supportLibraryVersion}",
 
     ]
 

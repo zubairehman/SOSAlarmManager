@@ -19,6 +19,7 @@ buildscript {
         implementation supportDependencies.lifeCycle
         implementation supportDependencies.supportv13
         implementation supportDependencies.design
+        implementation supportDependencies.supportv4
 
         //Dagger
         implementation daggerDependencies.dagger

@@ -1,8 +1,11 @@
 package com.cubivue.app.di
 
 import com.cubivue.app.ui.login.LoginActivity
+import com.cubivue.app.ui.login.fragments.LoginFragment
 import com.cubivue.base.di.ActivityScope
+import com.cubivue.base.di.FragmentScope
 import com.cubivue.base.ui.baseclasses.activity.BaseActivity
+import com.cubivue.base.ui.baseclasses.fragment.BaseFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -25,6 +28,14 @@ abstract class BindingModule {
     @ContributesAndroidInjector
     abstract fun baseActivity(): BaseActivity
 
+    /* @ActivityScope
+     @ContributesAndroidInjector
+     abstract fun baseLoginActivity(): BaseLoginActivity
+
+     @ActivityScope
+     @ContributesAndroidInjector
+     abstract fun baseToolbarActivity(): BaseToolbarActivity*/
+
     @ActivityScope
     @ContributesAndroidInjector
     abstract fun loginActivity(): LoginActivity
@@ -33,6 +44,17 @@ abstract class BindingModule {
      ** Fragments
      ****************************/
 
+    @FragmentScope
+    @ContributesAndroidInjector
+    abstract fun baseFragment(): BaseFragment
+
+    /*@FragmentScope
+    @ContributesAndroidInjector
+    abstract fun baseToolbarFragment(): BaseToolbarFragment*/
+
+    @FragmentScope
+    @ContributesAndroidInjector
+    abstract fun loginFragment(): LoginFragment
 
     /****************************
      ** Dialogs

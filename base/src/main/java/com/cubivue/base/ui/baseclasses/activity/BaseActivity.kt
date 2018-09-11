@@ -13,6 +13,7 @@ import com.cubivue.base.util.permissions.enums.PermissionEnum
 import com.cubivue.base.util.permissions.interfaces.FullCallback
 import com.michaelflisar.rxbus2.interfaces.IRxBusQueue
 import com.michaelflisar.rxbus2.rx.RxDisposableManager
+import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
@@ -39,7 +40,7 @@ abstract class BaseActivity : AppCompatActivity(), IRxBusQueue, HasSupportFragme
     private val mResumedProcessor = BehaviorProcessor.createDefault(false)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        //AndroidInjection.inject(this)
+        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.base_activity)
         FragmentUtil(this).replaceBaseFragment(getBaseFragment())
