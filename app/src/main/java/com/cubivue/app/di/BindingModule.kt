@@ -1,10 +1,16 @@
 package com.cubivue.app.di
 
+import com.cubivue.app.ui.home.HomeActivity
+import com.cubivue.app.ui.home.fragments.DrawerFragment
+import com.cubivue.app.ui.home.fragments.EmptyFragment
 import com.cubivue.app.ui.login.LoginActivity
 import com.cubivue.app.ui.login.fragments.LoginFragment
+import com.cubivue.app.ui.splash.SplashActivity
+import com.cubivue.app.ui.splash.fragments.SplashFragment
 import com.cubivue.base.di.ActivityScope
 import com.cubivue.base.di.FragmentScope
 import com.cubivue.base.ui.baseclasses.activity.BaseActivity
+import com.cubivue.base.ui.baseclasses.activity.BaseDrawerActivity
 import com.cubivue.base.ui.baseclasses.fragment.BaseFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -28,6 +34,10 @@ abstract class BindingModule {
     @ContributesAndroidInjector
     abstract fun baseActivity(): BaseActivity
 
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract fun baseDrawerActivity(): BaseDrawerActivity
+
     /* @ActivityScope
      @ContributesAndroidInjector
      abstract fun baseLoginActivity(): BaseLoginActivity
@@ -39,6 +49,14 @@ abstract class BindingModule {
     @ActivityScope
     @ContributesAndroidInjector
     abstract fun loginActivity(): LoginActivity
+
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract fun splashActivity(): SplashActivity
+
+    @ActivityScope
+    @ContributesAndroidInjector
+    abstract fun homeActivity(): HomeActivity
 
     /****************************
      ** Fragments
@@ -54,7 +72,19 @@ abstract class BindingModule {
 
     @FragmentScope
     @ContributesAndroidInjector
+    abstract fun splashFragment(): SplashFragment
+
+    @FragmentScope
+    @ContributesAndroidInjector
     abstract fun loginFragment(): LoginFragment
+
+    @FragmentScope
+    @ContributesAndroidInjector
+    abstract fun emptyFragment(): EmptyFragment
+
+    @FragmentScope
+    @ContributesAndroidInjector
+    abstract fun drawerFragment(): DrawerFragment
 
     /****************************
      ** Dialogs

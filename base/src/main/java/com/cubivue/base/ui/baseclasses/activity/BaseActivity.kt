@@ -1,6 +1,7 @@
 package com.cubivue.base.ui.baseclasses.activity
 
 import android.arch.lifecycle.ViewModelProvider
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AlertDialog
@@ -42,6 +43,8 @@ abstract class BaseActivity : AppCompatActivity(), IRxBusQueue, HasSupportFragme
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE;
         setContentView(R.layout.base_activity)
         FragmentUtil(this).replaceBaseFragment(getBaseFragment())
 

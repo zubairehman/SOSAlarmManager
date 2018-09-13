@@ -6,28 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.cubivue.app.R
-import com.cubivue.app.ui.home.activities.DashboardActivity
-import com.cubivue.base.ui.baseclasses.fragment.BaseFragment
-import kotlinx.android.synthetic.main.fragment_login.*
+import com.cubivue.app.ui.home.HomeActivity
+import com.cubivue.base.ui.login.fragments.BaseLoginFragment
+import kotlinx.android.synthetic.main.fragment_client_login.*
 import java.util.*
 
-class LoginFragment : BaseFragment() {
+class LoginFragment : BaseLoginFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        return inflater.inflate(R.layout.fragment_client_login, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btn_login.setOnClickListener {
-            val intent = Intent(activity, DashboardActivity::class.java)
+            val intent = Intent(activity, HomeActivity::class.java)
             startActivity(intent)
             activity?.finish()
         }
-
     }
 
     override fun getExtras(extras: ArrayList<*>) {
-
     }
 }
