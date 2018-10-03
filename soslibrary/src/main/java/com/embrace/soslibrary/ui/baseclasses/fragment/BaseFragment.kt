@@ -22,9 +22,6 @@ abstract class BaseFragment : Fragment(), IRxBusQueue{
 
     private var isActive: Boolean = false
 
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         AndroidSupportInjection.inject(this)

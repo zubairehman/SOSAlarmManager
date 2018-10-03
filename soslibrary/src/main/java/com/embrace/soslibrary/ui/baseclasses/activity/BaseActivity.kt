@@ -35,9 +35,6 @@ abstract class BaseActivity : AppCompatActivity(), IRxBusQueue, HasSupportFragme
         return dispatchingAndroidInjector
     }
 
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
-
     private val mResumedProcessor = BehaviorProcessor.createDefault(false)
 
     override fun onCreate(savedInstanceState: Bundle?) {

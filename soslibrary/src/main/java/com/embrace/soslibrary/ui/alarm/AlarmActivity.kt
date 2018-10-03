@@ -28,10 +28,6 @@ import javax.inject.Inject
 
 class AlarmActivity : AppCompatActivity() {
 
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
-    lateinit var alarmViewModel: AlarmViewModel
-
     //timer variables
     private var countDownTimer: CountDownTimer? = null
     private var handler = Handler()
@@ -54,7 +50,6 @@ class AlarmActivity : AppCompatActivity() {
 
         //binding view model
         AndroidInjection.inject(this)
-        alarmViewModel = ViewModelProviders.of(this, viewModelFactory).get(AlarmViewModel::class.java)
 
         //getting intent
         sosAlarmDto = intent?.extras?.getSerializable("dto") as SOSAlarmDto?
