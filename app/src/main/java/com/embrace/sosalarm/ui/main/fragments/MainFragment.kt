@@ -14,7 +14,6 @@ import com.embrace.soslibrary.ui.baseclasses.fragment.BaseFragment
 import java.util.*
 import java.util.concurrent.TimeUnit
 
-
 class MainFragment : BaseFragment(), ISOSAlarmListener, IOnTouchListener, IOnShakeListener {
 
     //alarm builder
