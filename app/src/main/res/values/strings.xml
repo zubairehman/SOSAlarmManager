@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CubiVue App</string>
+    <string name="app_name">SOSAlarm</string>
 
     <!-- Preference Activity -->
     <string name="pa_title_language">Language</string>

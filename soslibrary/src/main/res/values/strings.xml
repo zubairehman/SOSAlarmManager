@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SOSAlarm Library</string>
+    <string name="permission_confirmation">You have denied storage access permission. Please visit settings and enable storage permission to enjoy full features of this app</string>
+
+    <!-- SOS Alarm Activity -->
+    <string name="txt_call_helpline">Helpline</string>
+    <string name="txt_timer">in %s sec</string>
+    <string name="txt_send_alarm">Sending Alarm</string>
+    <string name="txt_pin_error">Wrong pincode. Try again</string>
+    <string name="txt_cancel_alarm">Cancel Alarm</string>
+    <string name="txt_alarm_delivered">Delivered To:</string>
+    <string name="txt_sending_alarm">Sending Alarm</string>
+    <string name="txt_call_help" translatable="false">Press for Help!</string>
+    <string name="stop">Stop</string>
+    <string name="txt_pin_hint">Pin code</string>
+    <string name="txt_no_pin">No Pin Entered!</string>
+
+</resources>

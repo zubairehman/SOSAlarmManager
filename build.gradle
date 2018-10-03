@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 // Load dependencies
-apply from: 'base/dependencies.gradle'
+apply from: 'soslibrary/dependencies.gradle'
 
 buildscript {
     ext.kotlin_version = '1.2.51'
@@ -55,9 +55,6 @@ buildscript {
         testImplementation testDependencies.powerMockMockito
         testImplementation testDependencies.powerMockXStream
         testImplementation testDependencies.mockito
-
-        //preference module
-        implementation project(":preference")
     }
 
     repositories {

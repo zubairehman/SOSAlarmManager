@@ -8,7 +8,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "com.cubivue.app"
+        applicationId "com.embrace.sosalarm"
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
@@ -64,7 +64,7 @@ dependencies {
     sharedGroup dependencies
 
     //Base Module
-    implementation project(":base")
+    implementation project(":soslibrary")
     implementation("org.jetbrains:annotations:16.0.1")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.50")
 }

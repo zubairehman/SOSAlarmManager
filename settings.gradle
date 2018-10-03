@@ -1,5 +1,5 @@
-include ':app', ':base', ':preference'
-//include ':base'
-//project(':base').projectDir = new File(settingsDir, '../CubiVue Base/base')
+include ':app', ':soslibrary'
+//include ':soslibrary'
+//project(':soslibrary').projectDir = new File(settingsDir, '../CubiVue Base/soslibrary')
 
 

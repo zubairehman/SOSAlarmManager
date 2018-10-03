@@ -21,7 +21,7 @@ jobs:
       - restore_cache:
           paths:
             - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "sosalarm/build.gradle" }}
 
       - attach_workspace:
           at: ~/cubiVue
@@ -35,14 +35,14 @@ jobs:
       - save_cache:
           paths:
             - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "sosalarm/build.gradle" }}
 
       - run:
           name: Gradle build (debug)
-          command: ./gradlew -PciBuild=true :app:assembleDebug :app:assembleAndroidTest
+          command: ./gradlew -PciBuild=true :sosalarm:assembleDebug :sosalarm:assembleAndroidTest
 
       - store_artifacts:
-          path: app/build/outputs/apk/
+          path: sosalarm/build/outputs/apk/
           destination: /apk/
 
   # Run unit tests
@@ -55,7 +55,7 @@ jobs:
       - restore_cache:
                 paths:
                   - ~/.gradle
-                key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+                key: jars-{{ checksum "build.gradle" }}-{{ checksum  "sosalarm/build.gradle" }}
 
       - attach_workspace:
           at: ~/cubiVue
@@ -67,11 +67,11 @@ jobs:
                   ./gradlew test
 
       - store_artifacts:
-          path: app/build/reports
+          path: sosalarm/build/reports
           destination: reports
 
       - store_test_results:
-          path: app/build/test-results
+          path: sosalarm/build/test-results
 
   # Run UI tests
   test_instrumented:
@@ -83,7 +83,7 @@ jobs:
       - restore_cache:
                 paths:
                   - ~/.gradle
-                key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+                key: jars-{{ checksum "build.gradle" }}-{{ checksum  "sosalarm/build.gradle" }}
 
       - attach_workspace:
           at: ~/cubiVue

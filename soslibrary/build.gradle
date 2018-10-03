@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    testOptions { //used for Orchestrator
+        execution "ANDROID_TEST_ORCHESTRATOR"
+        unitTests {
+            includeAndroidResources true
+            returnDefaultValues = true
+        }
+    }
+}
+
+dependencies {
+
+    //Load All Dependencies
+    sharedGroup dependencies
+
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- General -->
+    <color name="statusBarColor">#26000000</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Menu Color Variables -->
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorMenuBackground">#c8000000</color>
+    <color name="checkEmpty">#eeeeee</color>
+
+
+    <!-- SOS Alarm Activity -->
+    <color name="colorBlack">#000000</color>
+    <color name="translucentBlack">#2d000000</color>
+    <color name="universalWhite">#ffffff</color>
+    <color name="colorGray">#555555</color>
+    <color name="translucentWhite">#4bffffff</color>
+    <color name="colorRed">#de211e</color>
+    <color name="colorBackground">#dcdcdc</color>
+
+    <!-- Text Colors -->
+    <color name="colorTextLight">#dfdfe0</color>
+    <color name="colorTextLightDark">#cdcdd0</color>
+    <color name="colorTextDark">#333333</color>
+    <color name="colorTextEmpty">#787878</color>
+
+</resources>

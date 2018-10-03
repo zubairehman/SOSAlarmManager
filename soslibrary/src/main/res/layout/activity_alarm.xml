@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_100"
+            android:layout_marginRight="@dimen/margin_100">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_timer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_300"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/margin_2"
+                app:cardElevation="@dimen/margin_8"
+                app:cardUseCompatPadding="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/btn_close"
+                        android:layout_width="@dimen/margin_55"
+                        android:layout_height="@dimen/margin_55"
+                        android:layout_gravity="top|right"
+                        android:padding="@dimen/margin_15"
+                        app:srcCompat="@drawable/ic_close"
+                        android:tint="@color/colorBlack"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="@dimen/margin_5"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txt_message"
+                            style="@style/TextTitleStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_10"
+                            android:text="@string/txt_call_helpline"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/txt_size_20"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_1"
+                            android:layout_marginTop="@dimen/margin_2"
+                            android:background="@color/translucentBlack" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txt_timer"
+                            style="@style/TextTitleStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_10"
+                            android:text="@string/txt_timer"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/txt_size_18"
+                            android:textStyle="bold" />
+
+                        <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/btn_send_alarm"
+                            style="@style/ButtonStyle"
+                            android:layout_width="@dimen/margin_250"
+                            android:layout_height="@dimen/margin_65"
+                            android:background="@drawable/bg_button_help"
+                            android:text="@string/txt_call_help"
+                            android:layout_marginTop="@dimen/margin_45"
+                            android:textSize="@dimen/txt_size_24"/>
+
+
+                    </LinearLayout>
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_300"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/margin_2"
+                app:cardElevation="@dimen/margin_8"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_5"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:text="@string/txt_send_alarm"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorTextDark"
+                        android:textSize="@dimen/txt_size_20"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_1"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:background="@color/translucentBlack" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="@dimen/margin_125"
+                        android:layout_height="@dimen/margin_125"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_signal"
+                        android:tint="@color/colorRed" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_8"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_alarm_delivered"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/txt_size_12"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:background="@drawable/bg_button_red"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txt_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_4"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/universalWhite"
+                                android:textSize="@dimen/txt_size_14"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_stop"
+                        style="@style/ButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/bg_button_red"
+                        android:text="@string/stop" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_pin_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_300"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/margin_2"
+                app:cardElevation="@dimen/margin_8"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_5"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/appCompatTextView"
+                            style="@style/TextTitleStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/margin_10"
+                            android:text="@string/txt_sending_alarm"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="@dimen/txt_size_20"
+                            android:textStyle="bold" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/btn_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignTop="@+id/appCompatTextView"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            app:srcCompat="@drawable/ic_go_back"
+                            android:layout_alignParentLeft="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_1"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:background="@color/translucentBlack" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_25"
+                        android:text="@string/txt_pin_hint"
+                        android:textColor="@color/colorTextEmpty"
+                        android:textSize="@dimen/txt_size_12" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/edit_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:layout_marginRight="@dimen/margin_8"
+                        android:hint="@string/txt_pin_hint"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="numberPassword"
+                        android:lines="1"
+                        android:maxLength="4"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/txt_size_18" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txt_pin_error"
+                        style="@style/TextTitleStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:gravity="start"
+                        android:text="@string/txt_pin_error"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/txt_size_16"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_sign_in"
+                        style="@style/ButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:background="@drawable/bg_button_blue"
+                        android:text="@string/txt_cancel_alarm" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+</RelativeLayout>
