@@ -1,7 +1,5 @@
 package com.embrace.soslibrary.ui.alarm.interfaces
 
-import java.io.Serializable
-
-interface IOnShakeListener : Serializable {
+interface IOnShakeListener {
     fun onShake()
 }

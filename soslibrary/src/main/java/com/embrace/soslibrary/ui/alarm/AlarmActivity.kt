@@ -18,11 +18,19 @@ import android.view.*
 import android.widget.Toast
 import com.embrace.soslibrary.R
 import com.embrace.soslibrary.constants.Constants
+import com.embrace.soslibrary.ui.alarm.models.EventType
+import com.embrace.soslibrary.ui.alarm.models.SOSAlarmBuilder
 import com.embrace.soslibrary.ui.alarm.models.SOSAlarmDto
+import com.embrace.soslibrary.ui.alarm.models.SOSAlarmHelper
 import com.embrace.soslibrary.util.Utils
 import com.embrace.soslibrary.util.fonts.FontUtils
+import com.michaelflisar.rxbus2.RxBusBuilder
+import com.michaelflisar.rxbus2.rx.RxBusMode
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_alarm.*
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 import java.util.*
 import javax.inject.Inject
 
@@ -32,9 +40,14 @@ class AlarmActivity : AppCompatActivity() {
     private var countDownTimer: CountDownTimer? = null
     private var handler = Handler()
     private var isAlarmRunning = false
+    private var count = 0
 
     //builder
     private var sosAlarmDto: SOSAlarmDto? = null
+
+    //helper variables
+    private var mSOSAlarmHelper: SOSAlarmHelper? = null
+    private var mSOSAlarmBuilder: SOSAlarmBuilder? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,22 +64,8 @@ class AlarmActivity : AppCompatActivity() {
         //binding view model
         AndroidInjection.inject(this)
 
-        //getting intent
-        sosAlarmDto = intent?.extras?.getSerializable("dto") as SOSAlarmDto?
-
         //initializing UI and setting click listeners
         initUI()
-
-        //check to see if alarm is already running
-        if (!sosAlarmDto?.isActive!!) {
-            startTimer()
-        } else {
-//            val count = Preferences.getInstance().getInt(Constants.ALARM_RESPONDENTS, 0)
-//            txt_count!!.text = count.toString() + ""
-            card_timer!!.visibility = View.GONE
-            card_alarm!!.visibility = View.VISIBLE
-            startAlarm()
-        }
 
         //registering event
 //        RxBusBuilder.create(EventType::class.java)
@@ -74,8 +73,9 @@ class AlarmActivity : AppCompatActivity() {
 //                .withMode(RxBusMode.Main)
 //                .subscribe { eventType ->
 //                    if (eventType.event_type == EventType.EVENT_ALARM_RESPONDED) {
-//                        val count = Preferences.getInstance().getInt(Constants.ALARM_RESPONDENTS, 0)
-//                        txt_count!!.text = count.toString() + ""
+////                        val count = Preferences.getInstance().getInt(Constants.ALARM_RESPONDENTS, 0)
+//                        count++
+//                        txt_count!!.text = count.toString()
 //                    }
 //                }
     }
@@ -167,12 +167,25 @@ class AlarmActivity : AppCompatActivity() {
     override fun onBackPressed() {
     }
 
-    override fun onPause() {
-        super.onPause()
+    public override fun onStart() {
+        super.onStart()
+        EventBus.getDefault().register(this)
     }
 
-    override fun onResume() {
-        super.onResume()
+    public override fun onStop() {
+        EventBus.getDefault().unregister(this)
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (isFinishing) {
+            clean()
+        }
+    }
+
+    private fun clean() {
+        EventBus.getDefault().removeStickyEvent(SOSAlarmHelper::class.java!!)
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
@@ -300,6 +313,28 @@ class AlarmActivity : AppCompatActivity() {
         sosAlarmDto?.isActive = false
     }
 
+    //Event Bus Methods:----------------------------------------------------------------------------
+    @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
+    fun onSOSAlarmHelperEvent(sosAlarmHelper: SOSAlarmHelper) {
+        this.mSOSAlarmHelper = sosAlarmHelper;
+        mSOSAlarmBuilder = mSOSAlarmHelper!!.sosAlarmBuilder;
+
+        //getting objct
+        sosAlarmDto = mSOSAlarmBuilder!!.getSOSAlarmDto()
+
+        //check to see if alarm is already running
+        if (!sosAlarmDto?.isActive!!) {
+            startTimer()
+        } else {
+//            val count = Preferences.getInstance().getInt(Constants.ALARM_RESPONDENTS, 0)
+//            txt_count!!.text = count.toString() + ""
+            card_timer!!.visibility = View.GONE
+            card_alarm!!.visibility = View.VISIBLE
+            startAlarm()
+        }
+    }
+
+    //Static Methods:-------------------------------------------------------------------------------
     companion object {
         const val REQUEST_CODE = 10101
     }

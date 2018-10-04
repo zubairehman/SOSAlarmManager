@@ -17,36 +17,16 @@ import java.io.Serializable
 import android.content.Context.SENSOR_SERVICE
 
 class SOSAlarmBuilder : Serializable {
-    @Transient
     private var context: Context? = null
     private var listener: ISOSAlarmListener? = null
-    private var deviceId: Int = 0
-    private var lat: Double = 0.toDouble()
-    private var lon: Double = 0.toDouble()
     private var isActive: Boolean = false
     private var initialTimerInMilliSeconds: Long = 0
     private var repeatTimeInMilliSeconds: Long = 0
-    private var alarmId: String? = null
-    private var url: String? = null
     private var pin: String? = null
+    private var sosAlarmDto: SOSAlarmDto? = null
 
     fun with(context: Context): SOSAlarmBuilder {
         this.context = context
-        return this
-    }
-
-    fun setDeviceId(deviceId: Int): SOSAlarmBuilder {
-        this.deviceId = deviceId
-        return this
-    }
-
-    fun setLat(lat: Double): SOSAlarmBuilder {
-        this.lat = lat
-        return this
-    }
-
-    fun setLon(lon: Double): SOSAlarmBuilder {
-        this.lon = lon
         return this
     }
 
@@ -62,16 +42,6 @@ class SOSAlarmBuilder : Serializable {
 
     fun setRepeatTimerInMilliSeconds(repeatTimeInMilliSeconds: Long): SOSAlarmBuilder {
         this.repeatTimeInMilliSeconds = repeatTimeInMilliSeconds
-        return this
-    }
-
-    fun setAlarmId(alarmId: String): SOSAlarmBuilder {
-        this.alarmId = alarmId
-        return this
-    }
-
-    fun setUrl(url: String): SOSAlarmBuilder {
-        this.url = url
         return this
     }
 
@@ -97,11 +67,23 @@ class SOSAlarmBuilder : Serializable {
         return this
     }
 
+    fun getActivity(): Activity {
+        return context as Activity;
+    }
+
+    fun clean() {
+        context = null
+    }
+
+    fun getSOSAlarmDto (): SOSAlarmDto? {
+        return sosAlarmDto;
+    }
+
     fun build(): SOSAlarmBuilder {
-        val intent = Intent(context, AlarmActivity::class.java)
-        intent.putExtra("dto", SOSAlarmDto(listener, deviceId, lat, lon, isActive,
-                initialTimerInMilliSeconds, repeatTimeInMilliSeconds, alarmId, url, pin))
-        context!!.startActivity(intent)
+        sosAlarmDto = SOSAlarmDto(listener, isActive, initialTimerInMilliSeconds, repeatTimeInMilliSeconds, pin)
+        val sosAlarmHelper = SOSAlarmHelper(this)
+        sosAlarmHelper.setSOSAlarmListener(listener)
+        sosAlarmHelper.startAlarmActivity()
 
         return this
     }

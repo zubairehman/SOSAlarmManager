@@ -6,11 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.embrace.sosalarm.R
-import com.embrace.soslibrary.ui.alarm.interfaces.ISOSAlarmListener
 import com.embrace.soslibrary.ui.alarm.interfaces.IOnShakeListener
 import com.embrace.soslibrary.ui.alarm.interfaces.IOnTouchListener
+import com.embrace.soslibrary.ui.alarm.interfaces.ISOSAlarmListener
 import com.embrace.soslibrary.ui.alarm.models.SOSAlarmBuilder
 import com.embrace.soslibrary.ui.baseclasses.fragment.BaseFragment
+import kotlinx.android.synthetic.main.fragment_main.*
 import java.util.*
 import java.util.concurrent.TimeUnit
 
@@ -35,6 +36,10 @@ class MainFragment : BaseFragment(), ISOSAlarmListener, IOnTouchListener, IOnSha
                 .setTouchListener(this) //Listener to touch events, will send callback on three taps
                 .setShakeListener(this) //Listener to shake events, will send callback on device shake
 
+        fab_menu.setOnClickListener{
+
+        }
+
     }
 
     override fun getExtras(extras: ArrayList<*>) {
@@ -46,6 +51,7 @@ class MainFragment : BaseFragment(), ISOSAlarmListener, IOnTouchListener, IOnSha
 
     override fun onAlarmSent() {
         Log.i("Alarm", "Alarm Sent")
+
     }
 
     override fun onTouch() {
