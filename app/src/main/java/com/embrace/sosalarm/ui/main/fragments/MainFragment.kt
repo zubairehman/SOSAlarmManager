@@ -37,7 +37,6 @@ class MainFragment : BaseFragment(), ISOSAlarmListener, IOnTouchListener, IOnSha
                 .setShakeListener(this) //Listener to shake events, will send callback on device shake
 
         fab_menu.setOnClickListener{
-
         }
 
     }
