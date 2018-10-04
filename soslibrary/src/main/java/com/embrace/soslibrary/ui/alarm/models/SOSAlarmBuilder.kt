@@ -80,6 +80,23 @@ class SOSAlarmBuilder : Serializable {
     }
 
     fun build(): SOSAlarmBuilder {
+
+        if (context == null) {
+            throw RuntimeException("Activity can't be null");
+        }
+
+        if (pin == null) {
+            throw RuntimeException("Pin can't be null");
+        }
+
+        if (repeatTimeInMilliSeconds == 0L) {
+            throw RuntimeException("Repeat time can't be 0");
+        }
+
+        if (initialTimerInMilliSeconds == 0L) {
+            throw RuntimeException("Initial time can't be 0");
+        }
+
         sosAlarmDto = SOSAlarmDto(listener, isActive, initialTimerInMilliSeconds, repeatTimeInMilliSeconds, pin)
         val sosAlarmHelper = SOSAlarmHelper(this)
         sosAlarmHelper.setSOSAlarmListener(listener)
