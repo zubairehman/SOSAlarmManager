@@ -28,9 +28,9 @@ class TouchDetector(context: IOnTouchListener) : Serializable {
                 Log.d("setupTouchDetection", "touchCount: " + (touchSequenceCount + 1));
 
                 if (touchSequenceCount == 0) {
-                    handlerTouchSequenceDetection?.postDelayed(runnableTouchSequenceDetection, 1500);
+                    handlerTouchSequenceDetection?.postDelayed(runnableTouchSequenceDetection, 1000);
                 } else {
-                    if (touchSequenceCount == 2) {
+                    if (touchSequenceCount == 3) {
                         //Do something here
                         this.listener?.onTouch()
                         Log.i("Touch", "Do Something here and the touchCount is: $touchSequenceCount")
